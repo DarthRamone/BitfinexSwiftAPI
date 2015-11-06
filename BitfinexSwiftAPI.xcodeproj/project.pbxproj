@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08733204475A4C52AF1254B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE9F1BE205605BB79EEB1CB /* Pods.framework */; };
+		43820EBE1BEB4EA800D095B8 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */; };
 		4386BEEF1BEAA46E006BBED4 /* BitfinexSwiftAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4386BEF61BEAA46E006BBED4 /* BitfinexSwiftAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */; };
 		4386BEFB1BEAA46E006BBED4 /* BitfinexSwiftAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386BEFA1BEAA46E006BBED4 /* BitfinexSwiftAPITests.swift */; };
+		4386BF081BEAA503006BBED4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386BF071BEAA503006BBED4 /* Client.swift */; };
+		4386BF0A1BEAA515006BBED4 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4386BF091BEAA515006BBED4 /* Pair.swift */; };
+		43BD2FD61BEB3D68004131FB /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BD2FD51BEB3D68004131FB /* Stats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +28,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BE9F1BE205605BB79EEB1CB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/BitfinexSwiftAPI-fgmlprkllddmkhbvdulnrsoigyot/Build/Products/Debug/CryptoSwift.framework"; sourceTree = "<group>"; };
 		4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitfinexSwiftAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitfinexSwiftAPI.h; sourceTree = "<group>"; };
 		4386BEF01BEAA46E006BBED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4386BEF51BEAA46E006BBED4 /* BitfinexSwiftAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitfinexSwiftAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4386BEFA1BEAA46E006BBED4 /* BitfinexSwiftAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitfinexSwiftAPITests.swift; sourceTree = "<group>"; };
 		4386BEFC1BEAA46E006BBED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4386BF071BEAA503006BBED4 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		4386BF091BEAA515006BBED4 /* Pair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
+		43BD2FD51BEB3D68004131FB /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		869F71E4AB198A45D2150D55 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B72AE5FCEE84EDF49C2EEF6E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08733204475A4C52AF1254B5 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43820EBE1BEB4EA800D095B8 /* CryptoSwift.framework in Frameworks */,
 				4386BEF61BEAA46E006BBED4 /* BitfinexSwiftAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +70,8 @@
 				4386BEED1BEAA46E006BBED4 /* BitfinexSwiftAPI */,
 				4386BEF91BEAA46E006BBED4 /* BitfinexSwiftAPITests */,
 				4386BEEC1BEAA46E006BBED4 /* Products */,
+				49C36AAFBD22D42E4AD6DEEB /* Pods */,
+				C5D462C023580576058D30ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +89,9 @@
 			children = (
 				4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */,
 				4386BEF01BEAA46E006BBED4 /* Info.plist */,
+				4386BF071BEAA503006BBED4 /* Client.swift */,
+				4386BF091BEAA515006BBED4 /* Pair.swift */,
+				43BD2FD51BEB3D68004131FB /* Stats.swift */,
 			);
 			path = BitfinexSwiftAPI;
 			sourceTree = "<group>";
@@ -84,6 +103,24 @@
 				4386BEFC1BEAA46E006BBED4 /* Info.plist */,
 			);
 			path = BitfinexSwiftAPITests;
+			sourceTree = "<group>";
+		};
+		49C36AAFBD22D42E4AD6DEEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B72AE5FCEE84EDF49C2EEF6E /* Pods.debug.xcconfig */,
+				869F71E4AB198A45D2150D55 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C5D462C023580576058D30ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */,
+				3BE9F1BE205605BB79EEB1CB /* Pods.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,10 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4386BEFF1BEAA46E006BBED4 /* Build configuration list for PBXNativeTarget "BitfinexSwiftAPI" */;
 			buildPhases = (
+				EBB9CFDF0FB4416F805F6C09 /* Check Pods Manifest.lock */,
 				4386BEE61BEAA46E006BBED4 /* Sources */,
 				4386BEE71BEAA46E006BBED4 /* Frameworks */,
 				4386BEE81BEAA46E006BBED4 /* Headers */,
 				4386BEE91BEAA46E006BBED4 /* Resources */,
+				DB9D330D9A4BCB5E6F159443 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,11 +228,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DB9D330D9A4BCB5E6F159443 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBB9CFDF0FB4416F805F6C09 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4386BEE61BEAA46E006BBED4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4386BF081BEAA503006BBED4 /* Client.swift in Sources */,
+				43BD2FD61BEB3D68004131FB /* Stats.swift in Sources */,
+				4386BF0A1BEAA515006BBED4 /* Pair.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +379,9 @@
 		};
 		4386BF001BEAA46E006BBED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B72AE5FCEE84EDF49C2EEF6E /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -317,12 +394,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = darthramone.BitfinexSwiftAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4386BF011BEAA46E006BBED4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 869F71E4AB198A45D2150D55 /* Pods.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -335,6 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = darthramone.BitfinexSwiftAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -379,6 +461,7 @@
 				4386BF011BEAA46E006BBED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4386BF021BEAA46E006BBED4 /* Build configuration list for PBXNativeTarget "BitfinexSwiftAPITests" */ = {
 			isa = XCConfigurationList;
@@ -387,6 +470,7 @@
 				4386BF041BEAA46E006BBED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

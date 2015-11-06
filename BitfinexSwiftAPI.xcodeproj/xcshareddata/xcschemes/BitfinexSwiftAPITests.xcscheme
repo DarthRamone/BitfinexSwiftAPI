@@ -12,6 +12,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4386BEF41BEAA46E006BBED4"
+               BuildableName = "BitfinexSwiftAPITests.xctest"
+               BlueprintName = "BitfinexSwiftAPITests"
+               ReferencedContainer = "container:BitfinexSwiftAPI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
