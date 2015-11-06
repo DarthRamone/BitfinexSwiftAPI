@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		08733204475A4C52AF1254B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE9F1BE205605BB79EEB1CB /* Pods.framework */; };
+		434EC3101BED65730037A2F3 /* BitfinexRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC30F1BED65730037A2F3 /* BitfinexRequest.swift */; };
+		434EC3121BED6A8E0037A2F3 /* Limit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3111BED6A8E0037A2F3 /* Limit.swift */; };
+		434EC3141BED6C230037A2F3 /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3131BED6C230037A2F3 /* OrderType.swift */; };
+		434EC3161BED6DC10037A2F3 /* TradeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3151BED6DC10037A2F3 /* TradeType.swift */; };
+		434EC3181BED6E3B0037A2F3 /* DepositMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3171BED6E3B0037A2F3 /* DepositMethod.swift */; };
+		434EC31A1BED6EA10037A2F3 /* WalletType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3191BED6EA10037A2F3 /* WalletType.swift */; };
+		434EC31C1BED6F980037A2F3 /* OrderSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC31B1BED6F980037A2F3 /* OrderSide.swift */; };
+		434EC31E1BED70900037A2F3 /* FundingDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC31D1BED70900037A2F3 /* FundingDirection.swift */; };
 		43820EBE1BEB4EA800D095B8 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */; };
 		4386BEEF1BEAA46E006BBED4 /* BitfinexSwiftAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4386BEF61BEAA46E006BBED4 /* BitfinexSwiftAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */; };
@@ -29,6 +37,14 @@
 
 /* Begin PBXFileReference section */
 		3BE9F1BE205605BB79EEB1CB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		434EC30F1BED65730037A2F3 /* BitfinexRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitfinexRequest.swift; sourceTree = "<group>"; };
+		434EC3111BED6A8E0037A2F3 /* Limit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Limit.swift; sourceTree = "<group>"; };
+		434EC3131BED6C230037A2F3 /* OrderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
+		434EC3151BED6DC10037A2F3 /* TradeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeType.swift; sourceTree = "<group>"; };
+		434EC3171BED6E3B0037A2F3 /* DepositMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositMethod.swift; sourceTree = "<group>"; };
+		434EC3191BED6EA10037A2F3 /* WalletType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletType.swift; sourceTree = "<group>"; };
+		434EC31B1BED6F980037A2F3 /* OrderSide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderSide.swift; sourceTree = "<group>"; };
+		434EC31D1BED70900037A2F3 /* FundingDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundingDirection.swift; sourceTree = "<group>"; };
 		43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/BitfinexSwiftAPI-fgmlprkllddmkhbvdulnrsoigyot/Build/Products/Debug/CryptoSwift.framework"; sourceTree = "<group>"; };
 		4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitfinexSwiftAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitfinexSwiftAPI.h; sourceTree = "<group>"; };
@@ -92,6 +108,14 @@
 				4386BF071BEAA503006BBED4 /* Client.swift */,
 				4386BF091BEAA515006BBED4 /* Pair.swift */,
 				43BD2FD51BEB3D68004131FB /* Stats.swift */,
+				434EC30F1BED65730037A2F3 /* BitfinexRequest.swift */,
+				434EC3111BED6A8E0037A2F3 /* Limit.swift */,
+				434EC3131BED6C230037A2F3 /* OrderType.swift */,
+				434EC3151BED6DC10037A2F3 /* TradeType.swift */,
+				434EC3171BED6E3B0037A2F3 /* DepositMethod.swift */,
+				434EC3191BED6EA10037A2F3 /* WalletType.swift */,
+				434EC31B1BED6F980037A2F3 /* OrderSide.swift */,
+				434EC31D1BED70900037A2F3 /* FundingDirection.swift */,
 			);
 			path = BitfinexSwiftAPI;
 			sourceTree = "<group>";
@@ -266,9 +290,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434EC3161BED6DC10037A2F3 /* TradeType.swift in Sources */,
+				434EC31C1BED6F980037A2F3 /* OrderSide.swift in Sources */,
+				434EC3141BED6C230037A2F3 /* OrderType.swift in Sources */,
+				434EC3121BED6A8E0037A2F3 /* Limit.swift in Sources */,
 				4386BF081BEAA503006BBED4 /* Client.swift in Sources */,
 				43BD2FD61BEB3D68004131FB /* Stats.swift in Sources */,
+				434EC3101BED65730037A2F3 /* BitfinexRequest.swift in Sources */,
+				434EC31E1BED70900037A2F3 /* FundingDirection.swift in Sources */,
+				434EC31A1BED6EA10037A2F3 /* WalletType.swift in Sources */,
 				4386BF0A1BEAA515006BBED4 /* Pair.swift in Sources */,
+				434EC3181BED6E3B0037A2F3 /* DepositMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
