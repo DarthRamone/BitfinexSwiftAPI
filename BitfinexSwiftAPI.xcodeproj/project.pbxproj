@@ -8,14 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		08733204475A4C52AF1254B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE9F1BE205605BB79EEB1CB /* Pods.framework */; };
+		430E9B221BF0EC5200937E34 /* DepositNewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E9B211BF0EC5200937E34 /* DepositNewResponse.swift */; };
 		434EC3101BED65730037A2F3 /* BitfinexRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC30F1BED65730037A2F3 /* BitfinexRequest.swift */; };
-		434EC3121BED6A8E0037A2F3 /* Limit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3111BED6A8E0037A2F3 /* Limit.swift */; };
 		434EC3141BED6C230037A2F3 /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3131BED6C230037A2F3 /* OrderType.swift */; };
 		434EC3161BED6DC10037A2F3 /* TradeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3151BED6DC10037A2F3 /* TradeType.swift */; };
 		434EC3181BED6E3B0037A2F3 /* DepositMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3171BED6E3B0037A2F3 /* DepositMethod.swift */; };
 		434EC31A1BED6EA10037A2F3 /* WalletType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3191BED6EA10037A2F3 /* WalletType.swift */; };
 		434EC31C1BED6F980037A2F3 /* OrderSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC31B1BED6F980037A2F3 /* OrderSide.swift */; };
 		434EC31E1BED70900037A2F3 /* FundingDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC31D1BED70900037A2F3 /* FundingDirection.swift */; };
+		434EC3201BED91CB0037A2F3 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC31F1BED91CB0037A2F3 /* Symbol.swift */; };
+		434EC3231BED92320037A2F3 /* BitfinexAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3221BED92320037A2F3 /* BitfinexAPI.swift */; };
+		434EC3271BEE24550037A2F3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3261BEE24550037A2F3 /* Extensions.swift */; };
+		434EC32A1BEE2C540037A2F3 /* AccountInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3291BEE2C540037A2F3 /* AccountInfoResponse.swift */; };
+		434EC32D1BEE2CC00037A2F3 /* ResponseSerializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC32C1BEE2CC00037A2F3 /* ResponseSerializers.swift */; };
+		434EC32F1BEE2E520037A2F3 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC32E1BEE2E520037A2F3 /* Currency.swift */; };
+		434EC3311BEE2EA20037A2F3 /* Fees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3301BEE2EA20037A2F3 /* Fees.swift */; };
+		434EC3371BEE3C0A0037A2F3 /* JSONErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3361BEE3C0A0037A2F3 /* JSONErrors.swift */; };
+		434EC3391BEE3DA80037A2F3 /* ResponseObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3381BEE3DA80037A2F3 /* ResponseObjectSerializable.swift */; };
 		43820EBE1BEB4EA800D095B8 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */; };
 		4386BEEF1BEAA46E006BBED4 /* BitfinexSwiftAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4386BEF61BEAA46E006BBED4 /* BitfinexSwiftAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */; };
@@ -37,14 +46,23 @@
 
 /* Begin PBXFileReference section */
 		3BE9F1BE205605BB79EEB1CB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		430E9B211BF0EC5200937E34 /* DepositNewResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositNewResponse.swift; sourceTree = "<group>"; };
 		434EC30F1BED65730037A2F3 /* BitfinexRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitfinexRequest.swift; sourceTree = "<group>"; };
-		434EC3111BED6A8E0037A2F3 /* Limit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Limit.swift; sourceTree = "<group>"; };
 		434EC3131BED6C230037A2F3 /* OrderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
 		434EC3151BED6DC10037A2F3 /* TradeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeType.swift; sourceTree = "<group>"; };
 		434EC3171BED6E3B0037A2F3 /* DepositMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositMethod.swift; sourceTree = "<group>"; };
 		434EC3191BED6EA10037A2F3 /* WalletType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletType.swift; sourceTree = "<group>"; };
 		434EC31B1BED6F980037A2F3 /* OrderSide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderSide.swift; sourceTree = "<group>"; };
 		434EC31D1BED70900037A2F3 /* FundingDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundingDirection.swift; sourceTree = "<group>"; };
+		434EC31F1BED91CB0037A2F3 /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		434EC3221BED92320037A2F3 /* BitfinexAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitfinexAPI.swift; sourceTree = "<group>"; };
+		434EC3261BEE24550037A2F3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		434EC3291BEE2C540037A2F3 /* AccountInfoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfoResponse.swift; sourceTree = "<group>"; };
+		434EC32C1BEE2CC00037A2F3 /* ResponseSerializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerializers.swift; sourceTree = "<group>"; };
+		434EC32E1BEE2E520037A2F3 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		434EC3301BEE2EA20037A2F3 /* Fees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fees.swift; sourceTree = "<group>"; };
+		434EC3361BEE3C0A0037A2F3 /* JSONErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONErrors.swift; sourceTree = "<group>"; };
+		434EC3381BEE3DA80037A2F3 /* ResponseObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObjectSerializable.swift; sourceTree = "<group>"; };
 		43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/BitfinexSwiftAPI-fgmlprkllddmkhbvdulnrsoigyot/Build/Products/Debug/CryptoSwift.framework"; sourceTree = "<group>"; };
 		4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitfinexSwiftAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitfinexSwiftAPI.h; sourceTree = "<group>"; };
@@ -80,6 +98,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		434EC3211BED92240037A2F3 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				434EC3221BED92320037A2F3 /* BitfinexAPI.swift */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		434EC3281BEE2C380037A2F3 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				434EC3291BEE2C540037A2F3 /* AccountInfoResponse.swift */,
+				434EC3381BEE3DA80037A2F3 /* ResponseObjectSerializable.swift */,
+				430E9B211BF0EC5200937E34 /* DepositNewResponse.swift */,
+			);
+			name = Responses;
+			sourceTree = "<group>";
+		};
+		434EC32B1BEE2CAA0037A2F3 /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				434EC32C1BEE2CC00037A2F3 /* ResponseSerializers.swift */,
+			);
+			name = Serializers;
+			sourceTree = "<group>";
+		};
+		434EC3351BEE3BF70037A2F3 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				434EC3361BEE3C0A0037A2F3 /* JSONErrors.swift */,
+			);
+			name = Errors;
+			sourceTree = "<group>";
+		};
 		4386BEE11BEAA46E006BBED4 = {
 			isa = PBXGroup;
 			children = (
@@ -103,19 +155,26 @@
 		4386BEED1BEAA46E006BBED4 /* BitfinexSwiftAPI */ = {
 			isa = PBXGroup;
 			children = (
+				434EC3351BEE3BF70037A2F3 /* Errors */,
+				434EC32B1BEE2CAA0037A2F3 /* Serializers */,
+				434EC3281BEE2C380037A2F3 /* Responses */,
+				434EC3211BED92240037A2F3 /* Requests */,
 				4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */,
 				4386BEF01BEAA46E006BBED4 /* Info.plist */,
 				4386BF071BEAA503006BBED4 /* Client.swift */,
 				4386BF091BEAA515006BBED4 /* Pair.swift */,
 				43BD2FD51BEB3D68004131FB /* Stats.swift */,
 				434EC30F1BED65730037A2F3 /* BitfinexRequest.swift */,
-				434EC3111BED6A8E0037A2F3 /* Limit.swift */,
 				434EC3131BED6C230037A2F3 /* OrderType.swift */,
 				434EC3151BED6DC10037A2F3 /* TradeType.swift */,
 				434EC3171BED6E3B0037A2F3 /* DepositMethod.swift */,
 				434EC3191BED6EA10037A2F3 /* WalletType.swift */,
 				434EC31B1BED6F980037A2F3 /* OrderSide.swift */,
 				434EC31D1BED70900037A2F3 /* FundingDirection.swift */,
+				434EC31F1BED91CB0037A2F3 /* Symbol.swift */,
+				434EC3261BEE24550037A2F3 /* Extensions.swift */,
+				434EC32E1BEE2E520037A2F3 /* Currency.swift */,
+				434EC3301BEE2EA20037A2F3 /* Fees.swift */,
 			);
 			path = BitfinexSwiftAPI;
 			sourceTree = "<group>";
@@ -290,14 +349,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434EC32F1BEE2E520037A2F3 /* Currency.swift in Sources */,
 				434EC3161BED6DC10037A2F3 /* TradeType.swift in Sources */,
+				434EC32D1BEE2CC00037A2F3 /* ResponseSerializers.swift in Sources */,
 				434EC31C1BED6F980037A2F3 /* OrderSide.swift in Sources */,
 				434EC3141BED6C230037A2F3 /* OrderType.swift in Sources */,
-				434EC3121BED6A8E0037A2F3 /* Limit.swift in Sources */,
 				4386BF081BEAA503006BBED4 /* Client.swift in Sources */,
+				434EC3231BED92320037A2F3 /* BitfinexAPI.swift in Sources */,
+				434EC3201BED91CB0037A2F3 /* Symbol.swift in Sources */,
+				434EC3311BEE2EA20037A2F3 /* Fees.swift in Sources */,
 				43BD2FD61BEB3D68004131FB /* Stats.swift in Sources */,
 				434EC3101BED65730037A2F3 /* BitfinexRequest.swift in Sources */,
+				434EC3391BEE3DA80037A2F3 /* ResponseObjectSerializable.swift in Sources */,
+				434EC3371BEE3C0A0037A2F3 /* JSONErrors.swift in Sources */,
+				434EC3271BEE24550037A2F3 /* Extensions.swift in Sources */,
 				434EC31E1BED70900037A2F3 /* FundingDirection.swift in Sources */,
+				434EC32A1BEE2C540037A2F3 /* AccountInfoResponse.swift in Sources */,
+				430E9B221BF0EC5200937E34 /* DepositNewResponse.swift in Sources */,
 				434EC31A1BED6EA10037A2F3 /* WalletType.swift in Sources */,
 				4386BF0A1BEAA515006BBED4 /* Pair.swift in Sources */,
 				434EC3181BED6E3B0037A2F3 /* DepositMethod.swift in Sources */,

@@ -109,38 +109,32 @@ public class Client {
     }
     
     public func accountInfos() {
-
-        let nonce = getNonce()
         
-        let payloadDict: [String: String] = [
-            "nonce": nonce,
-            "request": "/v1/account_infos"
-        ]
-        
-        let payload = encryptPayload(payloadDict)
-        let signature = signed(payload)
-        
-        let headers = [
-            "X-BFX-APIKEY": apiKey,
-            "X-BFX-PAYLOAD": payload,
-            "X-BFX-SIGNATURE": signature
-        ]
-
-        manager.request(.POST, baseURL+"/account_infos", headers: headers, encoding: .JSON)
-            .responseJSON(options: NSJSONReadingOptions.MutableContainers) { response in
-   
+        manager.request(BitfixAPI.AccountInfos)
+            .responseObject { (response: Response<AccountInfoResponse, NSError>) in
                 switch response.result {
-                case .Success:
-                    let _json = JSON(data: response.data!)
-                    let json = _json.rawString()!
-                    let message = _json["message"].rawString()!
-                    print(json+message)
+                case .Success(let result):
+                    print(result)
                 case .Failure(let error):
-                    _ = JSON(data: response.data!)
                     print(error)
                 }
-            }
+        }
     }
+    
+    public func depositNew(method: DepositMethod, wallet: WalletType, renew: Bool = false) {
+        
+        manager.request(BitfixAPI.Deposit(method: method, wallet: wallet, renew: renew))
+            .responseObject { (response: Response<DepositNewResponse, NSError>) in
+                switch response.result {
+                case .Success(let result):
+                    print(result)
+                case .Failure(let error):
+                    print(error)
+                }
+        }
+        
+    }
+    
     
     func getNonce() -> String {
         // Nothing to see here, move along

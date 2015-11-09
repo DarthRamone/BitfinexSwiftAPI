@@ -33,6 +33,7 @@ class BitfinexSwiftAPITests: XCTestCase {
         let x = Client(apiKey: "U59Zh82XI3WmHUvPQlpxCjaHm4wvw8VOVwf9pfQ2iuB", apiSecret: "ulIiAavfzRMoS2auTnMV98ZaWBl3NADROKMTGdJ6SdG")
         
         x.accountInfos()
+        x.depositNew(DepositMethod.Bitcoin, wallet: WalletType.Exchange)
         
         var stats: [Stats]? = nil
         

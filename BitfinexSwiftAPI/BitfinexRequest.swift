@@ -7,21 +7,25 @@
 //
 
 import Foundation
+import Alamofire
 
-public enum BitfinexRequest {
+public protocol BitfinexRequest: URLRequestConvertible {
     
-    case Ticker(symbol: String)
+}
+
+extension NSMutableURLRequest {
     
-    case Symbols
-    
-    case Stats(symbol: String)
-    
-    case AccountInfos
-    
-    case Fundingbook(limits: Limit?)
-    
-    case Orderbook(symbol: String, limits: Limit?, group: Bool)
-    
-    case Trades(symbol: String, timestamp: String?, limitTrades: Int)
-    
+    var nonce: String {
+        get {
+            // Nothing to see here, move along
+            var x = timeval()
+            gettimeofday(&x, nil)
+            
+            let seconds: Int = x.tv_sec
+            let millis: Int32 = x.tv_usec
+            
+            return "\(seconds)\(millis)000"
+        }
+    }
+
 }
