@@ -10,10 +10,10 @@ import Foundation
 
 public enum Currency: String {
     
-    case BTC = "BTC"
+    case BTC = "btc"
     
-    case LTC = "LTC"
+    case LTC = "ltc"
     
-    case DRK = "DRK"
+    case DRK = "drk"
     
 }

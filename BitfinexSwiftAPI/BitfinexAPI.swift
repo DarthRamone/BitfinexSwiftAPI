@@ -42,7 +42,7 @@ public enum BitfixAPI: BitfinexRouterProtocol {
         return request
     }
 
-    func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
+    public func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
         
         let url = NSURL(string: self.baseURL)!
         let mutableURLRequest = NSMutableURLRequest(URL: url.URLByAppendingPathComponent(path))

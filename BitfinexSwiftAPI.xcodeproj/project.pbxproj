@@ -36,6 +36,11 @@
 		43AE1FFC1BF4D03D00F1982E /* StatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE1FFB1BF4D03D00F1982E /* StatsResponse.swift */; };
 		43BD2FD61BEB3D68004131FB /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BD2FD51BEB3D68004131FB /* Stat.swift */; };
 		43C38A2E1BF4D7810013B6F3 /* SymbolsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A2D1BF4D7810013B6F3 /* SymbolsResponse.swift */; };
+		43C38A301BF4DB530013B6F3 /* FundingbookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A2F1BF4DB530013B6F3 /* FundingbookResponse.swift */; };
+		43C38A321BF4DBD00013B6F3 /* Fundingbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A311BF4DBD00013B6F3 /* Fundingbook.swift */; };
+		43C38A341BF4F2E10013B6F3 /* OrderbookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A331BF4F2E10013B6F3 /* OrderbookResponse.swift */; };
+		43C38A361BF4F8270013B6F3 /* TradesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A351BF4F8270013B6F3 /* TradesResponse.swift */; };
+		43C38A391BF4F8F20013B6F3 /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A381BF4F8F20013B6F3 /* Trade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,11 @@
 		43AE1FFB1BF4D03D00F1982E /* StatsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsResponse.swift; sourceTree = "<group>"; };
 		43BD2FD51BEB3D68004131FB /* Stat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		43C38A2D1BF4D7810013B6F3 /* SymbolsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolsResponse.swift; sourceTree = "<group>"; };
+		43C38A2F1BF4DB530013B6F3 /* FundingbookResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundingbookResponse.swift; sourceTree = "<group>"; };
+		43C38A311BF4DBD00013B6F3 /* Fundingbook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fundingbook.swift; sourceTree = "<group>"; };
+		43C38A331BF4F2E10013B6F3 /* OrderbookResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderbookResponse.swift; sourceTree = "<group>"; };
+		43C38A351BF4F8270013B6F3 /* TradesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradesResponse.swift; sourceTree = "<group>"; };
+		43C38A381BF4F8F20013B6F3 /* Trade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trade.swift; sourceTree = "<group>"; };
 		869F71E4AB198A45D2150D55 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B72AE5FCEE84EDF49C2EEF6E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,14 +116,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		434EC3211BED92240037A2F3 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				434EC3221BED92320037A2F3 /* BitfinexAPI.swift */,
-			);
-			name = Requests;
-			sourceTree = "<group>";
-		};
 		434EC3281BEE2C380037A2F3 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +170,6 @@
 				434EC3351BEE3BF70037A2F3 /* Errors */,
 				434EC32B1BEE2CAA0037A2F3 /* Serializers */,
 				434EC3281BEE2C380037A2F3 /* Responses */,
-				434EC3211BED92240037A2F3 /* Requests */,
 				4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */,
 				4386BEF01BEAA46E006BBED4 /* Info.plist */,
 				4386BF071BEAA503006BBED4 /* Client.swift */,
@@ -183,6 +184,8 @@
 				434EC3261BEE24550037A2F3 /* Extensions.swift */,
 				434EC32E1BEE2E520037A2F3 /* Currency.swift */,
 				434EC3301BEE2EA20037A2F3 /* Fees.swift */,
+				43C38A311BF4DBD00013B6F3 /* Fundingbook.swift */,
+				43C38A381BF4F8F20013B6F3 /* Trade.swift */,
 			);
 			path = BitfinexSwiftAPI;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 		43AE1FF31BF4B87800F1982E /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				434EC3221BED92320037A2F3 /* BitfinexAPI.swift */,
 				43AE1FF41BF4B88C00F1982E /* OrdersRouter.swift */,
 				43AE1FF61BF4B8C600F1982E /* BitfinexRouters.swift */,
 				43AE1FF81BF4B9F500F1982E /* PublicRouter.swift */,
@@ -212,6 +216,9 @@
 				4386BF091BEAA515006BBED4 /* TickerResponse.swift */,
 				43AE1FFB1BF4D03D00F1982E /* StatsResponse.swift */,
 				43C38A2D1BF4D7810013B6F3 /* SymbolsResponse.swift */,
+				43C38A2F1BF4DB530013B6F3 /* FundingbookResponse.swift */,
+				43C38A331BF4F2E10013B6F3 /* OrderbookResponse.swift */,
+				43C38A351BF4F8270013B6F3 /* TradesResponse.swift */,
 			);
 			name = Public;
 			sourceTree = "<group>";
@@ -385,9 +392,12 @@
 				434EC3141BED6C230037A2F3 /* OrderType.swift in Sources */,
 				4386BF081BEAA503006BBED4 /* Client.swift in Sources */,
 				434EC3231BED92320037A2F3 /* BitfinexAPI.swift in Sources */,
+				43C38A301BF4DB530013B6F3 /* FundingbookResponse.swift in Sources */,
+				43C38A321BF4DBD00013B6F3 /* Fundingbook.swift in Sources */,
 				43AE1FFC1BF4D03D00F1982E /* StatsResponse.swift in Sources */,
 				434EC3201BED91CB0037A2F3 /* Symbol.swift in Sources */,
 				43AE1FF71BF4B8C600F1982E /* BitfinexRouters.swift in Sources */,
+				43C38A361BF4F8270013B6F3 /* TradesResponse.swift in Sources */,
 				434EC3311BEE2EA20037A2F3 /* Fees.swift in Sources */,
 				43AE1FF51BF4B88C00F1982E /* OrdersRouter.swift in Sources */,
 				43AE1FF91BF4B9F500F1982E /* PublicRouter.swift in Sources */,
@@ -400,6 +410,8 @@
 				430E9B221BF0EC5200937E34 /* DepositNewResponse.swift in Sources */,
 				434EC31A1BED6EA10037A2F3 /* WalletType.swift in Sources */,
 				4386BF0A1BEAA515006BBED4 /* TickerResponse.swift in Sources */,
+				43C38A341BF4F2E10013B6F3 /* OrderbookResponse.swift in Sources */,
+				43C38A391BF4F8F20013B6F3 /* Trade.swift in Sources */,
 				434EC3181BED6E3B0037A2F3 /* DepositMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

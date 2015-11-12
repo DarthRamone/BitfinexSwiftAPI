@@ -25,7 +25,7 @@ extension Request {
             }
             
             let json = JSON(data: validData)
-
+            
             let result = try! T(json: json)!
             
             return .Success(result)

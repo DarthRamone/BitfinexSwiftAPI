@@ -103,6 +103,50 @@ public class Client {
                     print(error)
                 }
         }
+    }
+    
+    public func fundingbook(completion: FundingbookResponse -> Void) {
         
+        print("-- Starting FUNDINGBOOK method ---------------------------")
+        
+        manager.request(PublicRouter.Fundingbook(currency: Currency.BTC, limitBids: 3, limitAsks: 3))
+            .responseObject { (response: Response<FundingbookResponse, NSError>) in
+                switch response.result {
+                case .Success(let result):
+                    completion(result)
+                case .Failure(let error):
+                    print(error)
+                }
+        }
+    }
+    
+    public func orderbook(completion: OrderbookResponse -> Void) {
+        
+        print("-- Starting ORDERBOOK method ---------------------------")
+        
+        manager.request(PublicRouter.Fundingbook(currency: Currency.BTC, limitBids: 3, limitAsks: 3))
+            .responseObject { (response: Response<OrderbookResponse, NSError>) in
+                switch response.result {
+                case .Success(let result):
+                    completion(result)
+                case .Failure(let error):
+                    print(error)
+                }
+        }
+    }
+    
+    public func trades(completion: TradesResponse -> Void) {
+        
+        print("-- Starting TRADES method ---------------------------")
+        
+        manager.request(PublicRouter.Trades(symbol: Symbol.BTCUSD, timestamp: nil, limitTrades: 5))
+            .responseObject { (response: Response<TradesResponse, NSError>) in
+                switch response.result {
+                case .Success(let result):
+                    completion(result)
+                case .Failure(let error):
+                    print(error)
+                }
+        }
     }
 }

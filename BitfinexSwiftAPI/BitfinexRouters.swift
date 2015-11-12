@@ -10,15 +10,21 @@ import Alamofire
 
 public protocol BitfinexRouterProtocol: URLRequestConvertible {
     
+    var nonce: String { get }
+    
+    var baseURL: String { get }
+    
+    func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest
+    
 }
 
 extension BitfinexRouterProtocol {
     
-    var baseURL: String {
+    public var baseURL: String {
         get { return "https://api.bitfinex.com" }
     }
     
-    var nonce: String {
+    public var nonce: String {
         get {
             // Nothing to see here, move along
             var x = timeval()
