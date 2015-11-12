@@ -1,19 +1,22 @@
 //
-//  BitfinexRequest.swift
+//  BitfinexRouterProtocol.swift
 //  BitfinexSwiftAPI
 //
-//  Created by Alexander Moshkin on 07.11.15.
+//  Created by Alexander Moshkin on 12.11.15.
 //  Copyright © 2015 DarthRamone. All rights reserved.
 //
 
-import Foundation
 import Alamofire
 
-public protocol BitfinexRequest: URLRequestConvertible {
+public protocol BitfinexRouterProtocol: URLRequestConvertible {
     
 }
 
-extension NSMutableURLRequest {
+extension BitfinexRouterProtocol {
+    
+    var baseURL: String {
+        get { return "https://api.bitfinex.com" }
+    }
     
     var nonce: String {
         get {
@@ -27,5 +30,4 @@ extension NSMutableURLRequest {
             return "\(seconds)\(millis)000"
         }
     }
-
 }

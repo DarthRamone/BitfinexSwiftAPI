@@ -20,9 +20,10 @@ public struct AccountInfoResponse: ResponseObjectSerializable {
     public init?(json: JSON) throws {
         
         guard
-            let makerFees = json.array?[0].dictionary?["maker_fees"]?.floatValue,
-            let takerFees = json[0].dictionaryValue["taker_fees"]?.floatValue,
-            let fees      = json[0]["fees"].feesArray
+            let dict = json.array?[0].dictionary,
+            let makerFees = dict["maker_fees"]?.floatValue,
+            let takerFees = dict["taker_fees"]?.floatValue,
+            let fees      = dict["fees"]?.feesArray
         else {
             throw JSONErrors.InvalidJSON(json: json)
         }

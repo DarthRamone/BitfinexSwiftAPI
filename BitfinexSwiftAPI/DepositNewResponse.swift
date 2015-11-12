@@ -6,7 +6,6 @@
 //  Copyright © 2015 DarthRamone. All rights reserved.
 //
 
-import Foundation
 import SwiftyJSON
 
 public struct DepositNewResponse: ResponseObjectSerializable {
@@ -19,19 +18,19 @@ public struct DepositNewResponse: ResponseObjectSerializable {
     
     public init?(json: JSON) throws {
         
-        guard
-            let result = json.dictionary?["result"]?.string,
-            let method = json.dictionaryValue["method"]?.string,
-            let currency = json.dictionaryValue["currency"]?.string,
-            let address = json.dictionaryValue["address"]?.string
+        guard let dict = json.dictionary,
+              let result = dict["result"]?.string,
+              let method = dict["method"]?.string,
+              let address = dict["address"]?.stringValue,
+              let currency = dict["currency"]?.string
         else {
-                throw JSONErrors.InvalidJSON(json: json)
+            throw JSONErrors.InvalidJSON(json: json)
         }
         
         guard result == "success" else {
             throw BitfinexErrors.InvalidRequest(message: address)
         }
-        
+  
         guard let castedMethod = DepositMethod(rawValue: method) else {
             throw BitfinexErrors.InvalidDeliveryMethod(method: method)
         }

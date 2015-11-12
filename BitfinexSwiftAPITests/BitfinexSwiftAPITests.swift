@@ -13,49 +13,59 @@ import SwiftyJSON
 
 class BitfinexSwiftAPITests: XCTestCase {
     
+    let client: Client = Client(apiKey: "U59Zh82XI3WmHUvPQlpxCjaHm4wvw8VOVwf9pfQ2iuB", apiSecret: "ulIiAavfzRMoS2auTnMV98ZaWBl3NADROKMTGdJ6SdG")
+    let timeout: Double = 3000
     
-    
-    override func setUp() {
-        super.setUp()
+    func testTicker() {
         
-                // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+       let expectation = expectationWithDescription("401")
         
-        let x = Client(apiKey: "U59Zh82XI3WmHUvPQlpxCjaHm4wvw8VOVwf9pfQ2iuB", apiSecret: "ulIiAavfzRMoS2auTnMV98ZaWBl3NADROKMTGdJ6SdG")
-        
-        x.accountInfos()
-        x.depositNew(DepositMethod.Bitcoin, wallet: WalletType.Exchange)
-        
-        var stats: [Stats]? = nil
-        
-        let expectation = expectationWithDescription("401")
-        
-        x.stats("btcusd") {_stats in
-            stats = _stats
+        client.ticker() {
+            print($0)
             expectation.fulfill()
         }
         
-        waitForExpectationsWithTimeout(3000, handler: nil)
+        waitForExpectationsWithTimeout(timeout, handler: nil)
+    }
+    
+    func testStats() {
+        
+        let expectation = expectationWithDescription("401")
+        
+        client.stats() {
+            print($0)
+            expectation.fulfill()
+        }
+        
+        waitForExpectationsWithTimeout(timeout, handler: nil)
+    }
+    
+    func testAccountInfos() {
+        
+        let expectation = expectationWithDescription("401")
+        
+        client.accountInfos() {
+            print($0)
+            expectation.fulfill()
+        }
+        
+        waitForExpectationsWithTimeout(timeout, handler: nil)
         
         XCTAssert(true)
-
+    }
+    
+    func testDepositNew() {
         
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+        let expectation = expectationWithDescription("401")
+        
+        client.depositNew(DepositMethod.Bitcoin, wallet: WalletType.Exchange, renew: false) {
+            
+            print($0)
+            expectation.fulfill()
         }
+        
+        waitForExpectationsWithTimeout(timeout, handler: nil)
+        
+        XCTAssert(true)
     }
-    
 }

@@ -23,4 +23,5 @@ public enum BitfinexErrors: ErrorType {
     
     case InvalidCurrency(currency: String)
     
+    case InvalidSymbol(symbol: String)
 }

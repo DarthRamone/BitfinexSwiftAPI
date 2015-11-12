@@ -10,6 +10,9 @@ import Foundation
 
 public enum Symbol: String {
     
-    case BTCUSD = "BTCUSD"
+    case BTCUSD = "btcusd"
     
+    case LTCUSD = "ltcusd"
+    
+    case LTCBTC = "ltcbtc"
 }

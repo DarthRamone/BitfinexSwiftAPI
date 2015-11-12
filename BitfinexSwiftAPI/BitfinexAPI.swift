@@ -11,15 +11,15 @@ import SwiftyJSON
 import CryptoSwift
 import Alamofire
 
-public enum BitfixAPI: URLRequestConvertible {
+public enum BitfixAPI: BitfinexRouterProtocol {
 
     static let apiKey = "U59Zh82XI3WmHUvPQlpxCjaHm4wvw8VOVwf9pfQ2iuB"
     static let apiSecret = "ulIiAavfzRMoS2auTnMV98ZaWBl3NADROKMTGdJ6SdG"
-    
-    static let baseURL = "https://api.bitfinex.com"
 
     case AccountInfos
     case Deposit(method: DepositMethod, wallet: WalletType, renew: Bool)
+    
+    
     
     public var URLRequest: NSMutableURLRequest {
         
@@ -41,24 +41,10 @@ public enum BitfixAPI: URLRequestConvertible {
         let request = createRequest(path, payload: payload)
         return request
     }
-    
-    
-    var nonce: String {
-        get {
-            // Nothing to see here, move along
-            var x = timeval()
-            gettimeofday(&x, nil)
-            
-            let seconds: Int = x.tv_sec
-            let millis: Int32 = x.tv_usec
-            
-            return "\(seconds)\(millis)000"
-        }
-    }
 
     func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
         
-        let url = NSURL(string: BitfixAPI.baseURL)!
+        let url = NSURL(string: self.baseURL)!
         let mutableURLRequest = NSMutableURLRequest(URL: url.URLByAppendingPathComponent(path))
         
         mutableURLRequest.HTTPMethod = "POST"
