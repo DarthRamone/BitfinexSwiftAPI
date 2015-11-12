@@ -94,17 +94,40 @@ class BitfinexSwiftAPITests: XCTestCase {
 //        
 //        waitForExpectationsWithTimeout(timeout, handler: nil)
 //    }
-
-    func testTrades() {
+//
+//    func testTrades() {
+//        
+//        let expectation = expectationWithDescription("401")
+//        
+//        client.trades {
+//            print($0)
+//            expectation.fulfill()
+//        }
+//        
+//        waitForExpectationsWithTimeout(timeout, handler: nil)
+//    }
+    
+//    func testLends() {
+//        
+//        let expectation = expectationWithDescription("401")
+//        
+//        client.lends {
+//            print($0)
+//            expectation.fulfill()
+//        }
+//        
+//        waitForExpectationsWithTimeout(timeout, handler: nil)
+//    }
+    
+    func testSYmbolDetails() {
         
         let expectation = expectationWithDescription("401")
         
-        client.trades {
+        client.symbolsDetails {
             print($0)
             expectation.fulfill()
         }
         
         waitForExpectationsWithTimeout(timeout, handler: nil)
     }
-    
 }

@@ -16,4 +16,5 @@ public enum Currency: String {
     
     case DRK = "drk"
     
+    case USD = "usd"
 }

@@ -41,6 +41,10 @@
 		43C38A341BF4F2E10013B6F3 /* OrderbookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A331BF4F2E10013B6F3 /* OrderbookResponse.swift */; };
 		43C38A361BF4F8270013B6F3 /* TradesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A351BF4F8270013B6F3 /* TradesResponse.swift */; };
 		43C38A391BF4F8F20013B6F3 /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A381BF4F8F20013B6F3 /* Trade.swift */; };
+		43C38A3B1BF4FDB50013B6F3 /* LendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A3A1BF4FDB50013B6F3 /* LendsResponse.swift */; };
+		43C38A3D1BF4FDE80013B6F3 /* Lend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A3C1BF4FDE80013B6F3 /* Lend.swift */; };
+		43C38A3F1BF5012B0013B6F3 /* SymbolsDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A3E1BF5012B0013B6F3 /* SymbolsDetailsResponse.swift */; };
+		43C38A411BF501E80013B6F3 /* SymbolDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38A401BF501E80013B6F3 /* SymbolDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,10 @@
 		43C38A331BF4F2E10013B6F3 /* OrderbookResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderbookResponse.swift; sourceTree = "<group>"; };
 		43C38A351BF4F8270013B6F3 /* TradesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradesResponse.swift; sourceTree = "<group>"; };
 		43C38A381BF4F8F20013B6F3 /* Trade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trade.swift; sourceTree = "<group>"; };
+		43C38A3A1BF4FDB50013B6F3 /* LendsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LendsResponse.swift; sourceTree = "<group>"; };
+		43C38A3C1BF4FDE80013B6F3 /* Lend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lend.swift; sourceTree = "<group>"; };
+		43C38A3E1BF5012B0013B6F3 /* SymbolsDetailsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolsDetailsResponse.swift; sourceTree = "<group>"; };
+		43C38A401BF501E80013B6F3 /* SymbolDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolDetails.swift; sourceTree = "<group>"; };
 		869F71E4AB198A45D2150D55 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B72AE5FCEE84EDF49C2EEF6E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +194,8 @@
 				434EC3301BEE2EA20037A2F3 /* Fees.swift */,
 				43C38A311BF4DBD00013B6F3 /* Fundingbook.swift */,
 				43C38A381BF4F8F20013B6F3 /* Trade.swift */,
+				43C38A3C1BF4FDE80013B6F3 /* Lend.swift */,
+				43C38A401BF501E80013B6F3 /* SymbolDetails.swift */,
 			);
 			path = BitfinexSwiftAPI;
 			sourceTree = "<group>";
@@ -219,6 +229,8 @@
 				43C38A2F1BF4DB530013B6F3 /* FundingbookResponse.swift */,
 				43C38A331BF4F2E10013B6F3 /* OrderbookResponse.swift */,
 				43C38A351BF4F8270013B6F3 /* TradesResponse.swift */,
+				43C38A3A1BF4FDB50013B6F3 /* LendsResponse.swift */,
+				43C38A3E1BF5012B0013B6F3 /* SymbolsDetailsResponse.swift */,
 			);
 			name = Public;
 			sourceTree = "<group>";
@@ -385,6 +397,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C38A2E1BF4D7810013B6F3 /* SymbolsResponse.swift in Sources */,
+				43C38A411BF501E80013B6F3 /* SymbolDetails.swift in Sources */,
+				43C38A3D1BF4FDE80013B6F3 /* Lend.swift in Sources */,
 				434EC32F1BEE2E520037A2F3 /* Currency.swift in Sources */,
 				434EC3161BED6DC10037A2F3 /* TradeType.swift in Sources */,
 				434EC32D1BEE2CC00037A2F3 /* ResponseSerializers.swift in Sources */,
@@ -397,12 +411,14 @@
 				43AE1FFC1BF4D03D00F1982E /* StatsResponse.swift in Sources */,
 				434EC3201BED91CB0037A2F3 /* Symbol.swift in Sources */,
 				43AE1FF71BF4B8C600F1982E /* BitfinexRouters.swift in Sources */,
+				43C38A3B1BF4FDB50013B6F3 /* LendsResponse.swift in Sources */,
 				43C38A361BF4F8270013B6F3 /* TradesResponse.swift in Sources */,
 				434EC3311BEE2EA20037A2F3 /* Fees.swift in Sources */,
 				43AE1FF51BF4B88C00F1982E /* OrdersRouter.swift in Sources */,
 				43AE1FF91BF4B9F500F1982E /* PublicRouter.swift in Sources */,
 				43BD2FD61BEB3D68004131FB /* Stat.swift in Sources */,
 				434EC3391BEE3DA80037A2F3 /* ResponseObjectSerializable.swift in Sources */,
+				43C38A3F1BF5012B0013B6F3 /* SymbolsDetailsResponse.swift in Sources */,
 				434EC3371BEE3C0A0037A2F3 /* JSONErrors.swift in Sources */,
 				434EC3271BEE24550037A2F3 /* Extensions.swift in Sources */,
 				434EC31E1BED70900037A2F3 /* FundingDirection.swift in Sources */,

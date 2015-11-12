@@ -149,4 +149,35 @@ public class Client {
                 }
         }
     }
+    
+    public func lends(completion: LendsResponse -> Void) {
+        
+        print("-- Starting LENDS method ---------------------------")
+        
+        manager.request(PublicRouter.Lends(currency: Currency.BTC, timestamp: nil, limitLends: 10))
+            .responseObject { (response: Response<LendsResponse, NSError>) in
+                switch response.result {
+                case .Success(let result):
+                    completion(result)
+                case .Failure(let error):
+                    print(error)
+                }
+        }
+    }
+
+    public func symbolsDetails(completion: SymbolsDetailsResponse -> Void) {
+        
+        print("-- Starting SYM DETAILS method ---------------------------")
+        
+        manager.request(PublicRouter.SymbolsDetails)
+            .responseObject { (response: Response<SymbolsDetailsResponse, NSError>) in
+                switch response.result {
+                case .Success(let result):
+                    completion(result)
+                case .Failure(let error):
+                    print(error)
+                }
+        }
+    }
+    
 }

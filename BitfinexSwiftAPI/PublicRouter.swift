@@ -14,6 +14,9 @@ public enum PublicRouter: BitfinexRouterProtocol {
     case Fundingbook(currency: Currency, limitBids: Int, limitAsks: Int)
     case Orderbook(symbol: Symbol, limitBids: Int, limitAsks: Int, group: Bool)
     case Trades(symbol: Symbol, timestamp: NSDate?, limitTrades: Int)
+    case Lends(currency: Currency, timestamp: NSDate?, limitLends: Int)
+    case SymbolsDetails
+    
     
     public var URLRequest: NSMutableURLRequest {
         
@@ -30,13 +33,17 @@ public enum PublicRouter: BitfinexRouterProtocol {
             path = "/v1/symbols"
         case .Fundingbook(let currency, let limitBids, let limitAsks):
             path = "/v1/lendbook/" + currency.rawValue
-            payload["limit_bids"] = limitBids
-            payload["limit_asks"] = limitAsks
+            payload = [
+                "limit_bids": limitBids,
+                "limit_asks": limitAsks
+            ]
         case .Orderbook(let symbol, let limitBids, let limitAsks, let group):
             path = "/v1/book/" + symbol.rawValue
-            payload["limit_bids"] = limitBids
-            payload["limit_asks"] = limitAsks
-            payload["group"]      = group.hashValue
+            payload = [
+                "limit_bids": limitBids,
+                "limit_asks": limitAsks,
+                "group":      group.hashValue
+            ]
         case .Trades(let symbol, let timestamp, let limitTrades):
             path = "/v1/trades/" + symbol.rawValue
             payload["limit_trades"] = limitTrades
@@ -45,6 +52,17 @@ public enum PublicRouter: BitfinexRouterProtocol {
             } else {
                 payload["timestamp"] = false
             }
+        case .Lends(let currency, let timestamp, let limitLends):
+            path = "/v1/lends/" + currency.rawValue
+            payload["limit_lends"] = limitLends
+            if let tstamp = timestamp {
+                payload["timestamp"] = tstamp.timeIntervalSince1970.description
+            } else {
+                payload["timestamp"] = false
+            }
+        case .SymbolsDetails:
+            path = "/v1/symbols_details"
+            
         }
         
         let request = createRequest(path, payload: payload)
