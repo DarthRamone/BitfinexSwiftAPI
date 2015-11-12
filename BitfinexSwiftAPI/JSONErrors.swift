@@ -27,4 +27,8 @@ public enum BitfinexErrors: ErrorType {
  
     case InvalidTradeType(tradeType: String)
     
+    case InvalidCast(message: String)
+    
+    case InvalidOrderSide(side: String)
+    
 }

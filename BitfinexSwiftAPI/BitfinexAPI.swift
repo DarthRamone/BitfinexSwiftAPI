@@ -18,9 +18,7 @@ public enum BitfixAPI: BitfinexRouterProtocol {
 
     case AccountInfos
     case Deposit(method: DepositMethod, wallet: WalletType, renew: Bool)
-    
-    
-    
+
     public var URLRequest: NSMutableURLRequest {
         
         var path = ""
@@ -42,6 +40,7 @@ public enum BitfixAPI: BitfinexRouterProtocol {
         return request
     }
 
+    
     public func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
         
         let url = NSURL(string: self.baseURL)!
@@ -59,9 +58,8 @@ public enum BitfixAPI: BitfinexRouterProtocol {
         ]
         
         mutableURLRequest.addHeaders(headers)
-
+        
         return mutableURLRequest
     }
-    
 }
 

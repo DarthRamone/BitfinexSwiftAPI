@@ -10,13 +10,25 @@ import Foundation
 
 public enum OrderType: String {
     
-    case Limit = "exchange limit"
+    case ExchangeLimit = "exchange limit"
     
-    case Market = "exchange market"
+    case ExchangeMarket = "exchange market"
     
-    case Stop = "exchange stop"
+    case ExchangeStop = "exchange stop"
     
-    case TrailingStop = "exchange trailing stop"
+    case ExchangeTrailingStop = "exchange trailing stop"
     
-    case FillOrKill = "exchange fill-or-kill"
+    case ExchangeFillOrKill = "exchange fill-or-kill"
+    
+    
+    case Limit = "limit"
+    
+    case Market = "market"
+    
+    case Stop = "stop"
+    
+    case TrailingStop = "trailing stop"
+    
+    case FillOrKill = "fill-or-kill"
+    
 }
