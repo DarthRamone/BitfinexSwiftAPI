@@ -39,6 +39,8 @@
 		4371B20B1BF52F3300A62DC6 /* DepositWithdrawalHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B20A1BF52F3300A62DC6 /* DepositWithdrawalHistoryResponse.swift */; };
 		4371B20F1BF5308600A62DC6 /* PastTrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B20E1BF5308600A62DC6 /* PastTrade.swift */; };
 		4371B2111BF5334B00A62DC6 /* PastTradesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B2101BF5334B00A62DC6 /* PastTradesResponse.swift */; };
+		4371B2131BF5358000A62DC6 /* MarginFundingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B2121BF5358000A62DC6 /* MarginFundingRouter.swift */; };
+		4371B2151BF535E600A62DC6 /* MarginOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B2141BF535E600A62DC6 /* MarginOffer.swift */; };
 		43820EBE1BEB4EA800D095B8 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */; };
 		4386BEEF1BEAA46E006BBED4 /* BitfinexSwiftAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4386BEF61BEAA46E006BBED4 /* BitfinexSwiftAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */; };
@@ -110,6 +112,8 @@
 		4371B20A1BF52F3300A62DC6 /* DepositWithdrawalHistoryResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositWithdrawalHistoryResponse.swift; sourceTree = "<group>"; };
 		4371B20E1BF5308600A62DC6 /* PastTrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastTrade.swift; sourceTree = "<group>"; };
 		4371B2101BF5334B00A62DC6 /* PastTradesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastTradesResponse.swift; sourceTree = "<group>"; };
+		4371B2121BF5358000A62DC6 /* MarginFundingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginFundingRouter.swift; sourceTree = "<group>"; };
+		4371B2141BF535E600A62DC6 /* MarginOffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginOffer.swift; sourceTree = "<group>"; };
 		43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/BitfinexSwiftAPI-fgmlprkllddmkhbvdulnrsoigyot/Build/Products/Debug/CryptoSwift.framework"; sourceTree = "<group>"; };
 		4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitfinexSwiftAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitfinexSwiftAPI.h; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 				43AE1FF81BF4B9F500F1982E /* PublicRouter.swift */,
 				4371B1F81BF521E500A62DC6 /* PositionsRouter.swift */,
 				4371B2021BF5273B00A62DC6 /* HistoricalDataRouter.swift */,
+				4371B2121BF5358000A62DC6 /* MarginFundingRouter.swift */,
 			);
 			name = Routers;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				4371B2061BF529A600A62DC6 /* BalanceLedger.swift */,
 				4371B2081BF52CEA00A62DC6 /* DepositWithdrawal.swift */,
 				4371B20E1BF5308600A62DC6 /* PastTrade.swift */,
+				4371B2141BF535E600A62DC6 /* MarginOffer.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4371B2131BF5358000A62DC6 /* MarginFundingRouter.swift in Sources */,
 				43C38A2E1BF4D7810013B6F3 /* SymbolsResponse.swift in Sources */,
 				4371B2111BF5334B00A62DC6 /* PastTradesResponse.swift in Sources */,
 				4371B20B1BF52F3300A62DC6 /* DepositWithdrawalHistoryResponse.swift in Sources */,
@@ -526,6 +533,7 @@
 				434EC3371BEE3C0A0037A2F3 /* JSONErrors.swift in Sources */,
 				434EC3271BEE24550037A2F3 /* Extensions.swift in Sources */,
 				4371B2071BF529A600A62DC6 /* BalanceLedger.swift in Sources */,
+				4371B2151BF535E600A62DC6 /* MarginOffer.swift in Sources */,
 				434EC31E1BED70900037A2F3 /* FundingDirection.swift in Sources */,
 				43C38A451BF50C8B0013B6F3 /* NewOrderResponse.swift in Sources */,
 				434EC32A1BEE2C540037A2F3 /* AccountInfoResponse.swift in Sources */,

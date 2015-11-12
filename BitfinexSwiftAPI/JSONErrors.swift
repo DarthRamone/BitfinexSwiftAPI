@@ -31,4 +31,6 @@ public enum BitfinexErrors: ErrorType {
     
     case InvalidOrderSide(side: String)
     
+    case InvalidFundingDirection(direction: String)
+    
 }
