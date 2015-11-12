@@ -28,6 +28,10 @@
 		4371B1F31BF5203200A62DC6 /* OrderStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1F21BF5203200A62DC6 /* OrderStatusResponse.swift */; };
 		4371B1F51BF5210300A62DC6 /* ActiveOrdersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1F41BF5210300A62DC6 /* ActiveOrdersResponse.swift */; };
 		4371B1F71BF5212600A62DC6 /* ActiveOrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1F61BF5212600A62DC6 /* ActiveOrderResponse.swift */; };
+		4371B1F91BF521E500A62DC6 /* PositionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1F81BF521E500A62DC6 /* PositionsRouter.swift */; };
+		4371B1FC1BF522D400A62DC6 /* ActivePositionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1FB1BF522D400A62DC6 /* ActivePositionsResponse.swift */; };
+		4371B1FE1BF522E000A62DC6 /* ClaimPositionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1FD1BF522E000A62DC6 /* ClaimPositionResponse.swift */; };
+		4371B2001BF5268400A62DC6 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1FF1BF5268400A62DC6 /* Position.swift */; };
 		43820EBE1BEB4EA800D095B8 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */; };
 		4386BEEF1BEAA46E006BBED4 /* BitfinexSwiftAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4386BEF61BEAA46E006BBED4 /* BitfinexSwiftAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */; };
@@ -88,6 +92,10 @@
 		4371B1F21BF5203200A62DC6 /* OrderStatusResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderStatusResponse.swift; sourceTree = "<group>"; };
 		4371B1F41BF5210300A62DC6 /* ActiveOrdersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOrdersResponse.swift; sourceTree = "<group>"; };
 		4371B1F61BF5212600A62DC6 /* ActiveOrderResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOrderResponse.swift; sourceTree = "<group>"; };
+		4371B1F81BF521E500A62DC6 /* PositionsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionsRouter.swift; sourceTree = "<group>"; };
+		4371B1FB1BF522D400A62DC6 /* ActivePositionsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivePositionsResponse.swift; sourceTree = "<group>"; };
+		4371B1FD1BF522E000A62DC6 /* ClaimPositionResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClaimPositionResponse.swift; sourceTree = "<group>"; };
+		4371B1FF1BF5268400A62DC6 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/BitfinexSwiftAPI-fgmlprkllddmkhbvdulnrsoigyot/Build/Products/Debug/CryptoSwift.framework"; sourceTree = "<group>"; };
 		4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitfinexSwiftAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitfinexSwiftAPI.h; sourceTree = "<group>"; };
@@ -145,6 +153,7 @@
 		434EC3281BEE2C380037A2F3 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				4371B1FA1BF522C200A62DC6 /* Positions */,
 				43C38A431BF50B520013B6F3 /* Orders */,
 				43AE1FFA1BF4BAC400F1982E /* Public */,
 				434EC3291BEE2C540037A2F3 /* AccountInfoResponse.swift */,
@@ -168,6 +177,16 @@
 				434EC3361BEE3C0A0037A2F3 /* JSONErrors.swift */,
 			);
 			name = Errors;
+			sourceTree = "<group>";
+		};
+		4371B1FA1BF522C200A62DC6 /* Positions */ = {
+			isa = PBXGroup;
+			children = (
+				4371B1FD1BF522E000A62DC6 /* ClaimPositionResponse.swift */,
+				4371B1FB1BF522D400A62DC6 /* ActivePositionsResponse.swift */,
+				4371B1FF1BF5268400A62DC6 /* Position.swift */,
+			);
+			name = Positions;
 			sourceTree = "<group>";
 		};
 		4386BEE11BEAA46E006BBED4 = {
@@ -222,6 +241,7 @@
 				43AE1FF41BF4B88C00F1982E /* OrdersRouter.swift */,
 				43AE1FF61BF4B8C600F1982E /* BitfinexRouters.swift */,
 				43AE1FF81BF4B9F500F1982E /* PublicRouter.swift */,
+				4371B1F81BF521E500A62DC6 /* PositionsRouter.swift */,
 			);
 			name = Routers;
 			sourceTree = "<group>";
@@ -447,11 +467,14 @@
 				4371B1F11BF51F3700A62DC6 /* ReplaceOrderParams.swift in Sources */,
 				434EC32D1BEE2CC00037A2F3 /* ResponseSerializers.swift in Sources */,
 				434EC31C1BED6F980037A2F3 /* OrderSide.swift in Sources */,
+				4371B2001BF5268400A62DC6 /* Position.swift in Sources */,
+				4371B1FE1BF522E000A62DC6 /* ClaimPositionResponse.swift in Sources */,
 				434EC3141BED6C230037A2F3 /* OrderType.swift in Sources */,
 				4371B1F51BF5210300A62DC6 /* ActiveOrdersResponse.swift in Sources */,
 				4386BF081BEAA503006BBED4 /* Client.swift in Sources */,
 				434EC3231BED92320037A2F3 /* BitfinexAPI.swift in Sources */,
 				43C38A4D1BF51DFB0013B6F3 /* CancellAllOrdersResponse.swift in Sources */,
+				4371B1F91BF521E500A62DC6 /* PositionsRouter.swift in Sources */,
 				43C38A301BF4DB530013B6F3 /* FundingbookResponse.swift in Sources */,
 				43C38A321BF4DBD00013B6F3 /* Fundingbook.swift in Sources */,
 				43AE1FFC1BF4D03D00F1982E /* StatsResponse.swift in Sources */,
@@ -481,6 +504,7 @@
 				43C38A341BF4F2E10013B6F3 /* OrderbookResponse.swift in Sources */,
 				43C38A391BF4F8F20013B6F3 /* Trade.swift in Sources */,
 				434EC3181BED6E3B0037A2F3 /* DepositMethod.swift in Sources */,
+				4371B1FC1BF522D400A62DC6 /* ActivePositionsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
