@@ -55,11 +55,11 @@ public struct MarginOffer: ResponseObjectSerializable {
             throw JSONErrors.InvalidJSON(json: json)
         }
         
-        guard let currency = Currency(rawValue: currStr) else {
+        guard let currency = Currency(string: currStr) else {
             throw BitfinexErrors.InvalidCurrency(currency: currStr)
         }
         
-        guard let direction = FundingDirection(rawValue: dirStr) else {
+        guard let direction = FundingDirection(string: dirStr) else {
             throw BitfinexErrors.InvalidFundingDirection(direction: dirStr)
         }
         

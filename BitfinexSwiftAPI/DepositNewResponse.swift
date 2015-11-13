@@ -31,11 +31,11 @@ public struct DepositNewResponse: ResponseObjectSerializable {
             throw BitfinexErrors.InvalidRequest(message: address)
         }
   
-        guard let castedMethod = DepositMethod(rawValue: method) else {
+        guard let castedMethod = DepositMethod(string: method) else {
             throw BitfinexErrors.InvalidDeliveryMethod(method: method)
         }
         
-        guard let castedCurrency = Currency(rawValue: currency) else {
+        guard let castedCurrency = Currency(string: currency) else {
             throw BitfinexErrors.InvalidCurrency(currency: currency)
         }
         

@@ -40,7 +40,7 @@ public struct SymbolDetails {
             throw JSONErrors.InvalidJSON(json: json)
         }
         
-        guard let pair = Symbol(rawValue: pairStr) else {
+        guard let pair = Symbol(string: pairStr) else {
             throw BitfinexErrors.InvalidSymbol(symbol: pairStr)
         }
         

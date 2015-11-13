@@ -67,15 +67,15 @@ public struct NewOrderResponse: ResponseObjectSerializable {
             throw JSONErrors.InvalidJSON(json: json)
         }
         
-        guard let symbol = Symbol(rawValue: symbolStr) else {
+        guard let symbol = Symbol(string: symbolStr) else {
             throw BitfinexErrors.InvalidSymbol(symbol: symbolStr)
         }
         
-        guard let type = OrderType(rawValue: typeStr) else {
+        guard let type = OrderType(string: typeStr) else {
             throw BitfinexErrors.InvalidTradeType(tradeType: typeStr)
         }
         
-        guard let side = OrderSide(rawValue: sideStr) else {
+        guard let side = OrderSide(string: sideStr) else {
             throw BitfinexErrors.InvalidOrderSide(side: sideStr)
         }
         

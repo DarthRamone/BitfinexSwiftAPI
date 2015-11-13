@@ -10,13 +10,15 @@ internal class NonceProvider {
     
     static let sharedInstanse = NonceProvider()
     
-    private var timestamp: Int
+    var timestamp: Int
     
-    internal var nonce: Int {
-        get { return timestamp++ }
+    internal var nonce: String {
+        get {
+            return "\(self.timestamp++)"
+        }
     }
     
-    private init() {
+    init() {
         // Nothing to see here, move along
         var x = timeval()
         gettimeofday(&x, nil)
@@ -24,6 +26,6 @@ internal class NonceProvider {
         let seconds: Int = x.tv_sec
         let millis: Int32 = x.tv_usec
             
-        timestamp = Int("\(seconds)\(millis)000")!
+        self.timestamp = Int("\(seconds)\(millis)000")!
     }
 }

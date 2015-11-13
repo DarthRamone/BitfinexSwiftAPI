@@ -43,11 +43,11 @@ public struct DepositWithdrawal {
             throw JSONErrors.InvalidJSON(json: json)
         }
 
-        guard let currency = Currency(rawValue: currStr) else {
+        guard let currency = Currency(string: currStr) else {
             throw BitfinexErrors.InvalidCurrency(currency: currStr)
         }
         
-        guard let method = DepositMethod(rawValue: methodStr) else {
+        guard let method = DepositMethod(string: methodStr) else {
             throw BitfinexErrors.InvalidDeliveryMethod(method: methodStr)
         }
         

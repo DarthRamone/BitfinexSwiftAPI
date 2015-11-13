@@ -46,11 +46,11 @@ public struct PastTrade {
             throw JSONErrors.InvalidJSON(json: json)
         }
         
-        guard let type = TradeType(rawValue: typeStr) else {
+        guard let type = TradeType(string: typeStr) else {
             throw BitfinexErrors.InvalidTradeType(tradeType: typeStr)
         }
         
-        guard let feeCurrency = Currency(rawValue: feeCurrencyStr) else {
+        guard let feeCurrency = Currency(string: feeCurrencyStr) else {
             throw BitfinexErrors.InvalidCurrency(currency: feeCurrencyStr)
         }
         

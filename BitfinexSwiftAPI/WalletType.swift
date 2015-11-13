@@ -17,3 +17,17 @@ public enum WalletType: String {
     case Deposit = "deposit"
     
 }
+
+extension WalletType {
+    
+    public init?(string: String) {
+        
+        switch string.lowercaseString {
+        case "trading": self.init(rawValue: "trading")
+        case "exchange": self.init(rawValue: "exchange")
+        case "deposit": self.init(rawValue: "deposit")
+        default: return nil
+        }
+    }
+    
+}

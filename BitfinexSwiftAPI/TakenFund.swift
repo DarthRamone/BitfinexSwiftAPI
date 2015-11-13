@@ -40,7 +40,7 @@ public struct TakenFund {
             throw JSONErrors.InvalidJSON(json: json)
         }
         
-        guard let currency = Currency(rawValue: currStr) else {
+        guard let currency = Currency(string: currStr) else {
             throw BitfinexErrors.InvalidCurrency(currency: currStr)
         }
         

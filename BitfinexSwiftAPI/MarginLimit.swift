@@ -30,7 +30,7 @@ public struct MarginLimit {
             throw JSONErrors.InvalidJSON(json: json)
         }
         
-        guard let onPair = Symbol(rawValue: pairStr) else {
+        guard let onPair = Symbol(string: pairStr) else {
             throw BitfinexErrors.InvalidSymbol(symbol: pairStr)
         }
         

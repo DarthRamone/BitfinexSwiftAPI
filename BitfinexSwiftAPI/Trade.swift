@@ -37,7 +37,7 @@ public struct Trade {
             throw JSONErrors.InvalidJSON(json: json)
         }
         
-        guard let type = TradeType(rawValue: strType) else {
+        guard let type = TradeType(string: strType) else {
             throw BitfinexErrors.InvalidTradeType(tradeType: strType)
         }
         

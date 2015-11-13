@@ -21,7 +21,7 @@ public class Client {
     private var apiKey: String
     private var apiSecret: [UInt8]
     
-    public init(apiKey: String, apiSecret: String) {
+    public init() {
         
         self.apiKey = ""
         self.apiSecret = [UInt8]()

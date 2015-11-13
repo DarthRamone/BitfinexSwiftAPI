@@ -30,11 +30,11 @@ public struct Wallet {
             throw JSONErrors.InvalidJSON(json: json)
         }
         
-        guard let type = WalletType(rawValue: typeStr) else {
+        guard let type = WalletType(string: typeStr) else {
             throw BitfinexErrors.InvalidWalletType(type: typeStr)
         }
         
-        guard let currency = Currency(rawValue: currStr) else {
+        guard let currency = Currency(string: currStr) else {
             throw BitfinexErrors.InvalidCurrency(currency: currStr)
         }
         

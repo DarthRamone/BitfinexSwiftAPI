@@ -15,4 +15,20 @@ public enum Symbol: String {
     case LTCUSD = "ltcusd"
     
     case LTCBTC = "ltcbtc"
+    
+}
+
+extension Symbol {
+    
+    public init?(string: String) {
+        
+        switch string.lowercaseString {
+        case "btcusd": self.init(rawValue: "btcusd")
+        case "ltcusd": self.init(rawValue: "ltcusd")
+        case "ltcbtc": self.init(rawValue: "ltcbtc")
+        default: return nil
+        }
+        
+    }
+    
 }

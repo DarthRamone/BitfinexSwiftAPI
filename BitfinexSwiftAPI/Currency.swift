@@ -17,4 +17,20 @@ public enum Currency: String {
     case DRK = "drk"
     
     case USD = "usd"
+
+}
+
+extension Currency {
+    
+    public init?(string: String) {
+        
+        switch string.lowercaseString {
+        case "btc": self.init(rawValue: "btc")
+        case "ltc": self.init(rawValue: "ltc")
+        case "drk": self.init(rawValue: "drk")
+        case "usd": self.init(rawValue: "usd")
+        default: return nil
+        }   
+    }
+    
 }

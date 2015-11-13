@@ -24,7 +24,7 @@ public struct UsedFunding {
             throw JSONErrors.InvalidJSON(json: json)
         }
         
-        guard let symbol = Symbol(rawValue: positionPair) else {
+        guard let symbol = Symbol(string: positionPair) else {
             throw BitfinexErrors.InvalidSymbol(symbol: positionPair)
         }
         

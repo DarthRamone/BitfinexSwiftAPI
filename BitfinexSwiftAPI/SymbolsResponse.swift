@@ -24,7 +24,7 @@ public struct SymbolsResponse: ResponseObjectSerializable {
                 throw JSONErrors.InvalidJSON(json: json)
             }
             
-            guard let symbol = Symbol(rawValue: strSym) else {
+            guard let symbol = Symbol(string: strSym) else {
                 throw BitfinexErrors.InvalidSymbol(symbol: strSym)
             }
             
