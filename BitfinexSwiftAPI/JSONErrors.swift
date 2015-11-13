@@ -33,4 +33,6 @@ public enum BitfinexErrors: ErrorType {
     
     case InvalidFundingDirection(direction: String)
     
+    case InvalidWalletType(type: String)
+    
 }

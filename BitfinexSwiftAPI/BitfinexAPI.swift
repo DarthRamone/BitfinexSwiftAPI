@@ -18,6 +18,7 @@ public enum BitfixAPI: BitfinexRouterProtocol {
 
     case AccountInfos
     case Deposit(method: DepositMethod, wallet: WalletType, renew: Bool)
+    case WalletBalances
 
     public var URLRequest: NSMutableURLRequest {
         
@@ -32,6 +33,8 @@ public enum BitfixAPI: BitfinexRouterProtocol {
             payload["method"] = method.rawValue
             payload["wallet_name"] = wallet.rawValue
             payload["renew"] = renew ? 1 : 0
+        case .WalletBalances:
+            path = "/v1/balances"
         }
         
        
