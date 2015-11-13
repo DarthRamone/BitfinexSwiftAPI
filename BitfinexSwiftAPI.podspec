@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "BitfinexSwiftAPI"
-  s.version          = "0.0.3"
+  s.version          = "0.1.0"
   s.summary          = "BitfinexSwiftAPI provides API access to bitfinex.com"
 
   s.description      = <<-DESC
@@ -12,10 +12,9 @@ Pod::Spec.new do |s|
   s.author           = { "Alexander Moshkin" => "moshkin_alexander@outlook.com" }
   s.source           = { :git => "https://DarthRamone@bitbucket.org/DarthRamone/bitfinexswiftapi.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '9.1'
   s.requires_arc = true
 
-  s.dependency 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+  s.dependency 'SwiftyJSON', '~> 2.3'
   s.dependency 'Alamofire', '~> 3.0'
   s.dependency 'CryptoSwift', '~> 0.1'
 end
