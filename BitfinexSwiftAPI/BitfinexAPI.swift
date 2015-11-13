@@ -19,11 +19,13 @@ public enum BitfixAPI: BitfinexRouterProtocol {
     case AccountInfos
     case Deposit(method: DepositMethod, wallet: WalletType, renew: Bool)
     case WalletBalances
-
+    case MarginInfos
+    
+    
     public var URLRequest: NSMutableURLRequest {
         
         var path = ""
-        var payload: [String: AnyObject] = [ "nonce": nonce ]
+        var payload: [String: AnyObject] = [ "nonce": NonceProvider.sharedInstanse.nonce ]
         
         switch self {
         case .AccountInfos:
@@ -35,6 +37,8 @@ public enum BitfixAPI: BitfinexRouterProtocol {
             payload["renew"] = renew ? 1 : 0
         case .WalletBalances:
             path = "/v1/balances"
+        case .MarginInfos:
+            path = "/v1/margin_infos"
         }
         
        

@@ -20,7 +20,7 @@ public enum OrdersRouter: BitfinexRouterProtocol {
     public var URLRequest: NSMutableURLRequest {
         
         var path = ""
-        var payload: [String: AnyObject] = [ "nonce": nonce ]
+        var payload: [String: AnyObject] = [ "nonce": NonceProvider.sharedInstanse.nonce ]
         
         switch self {
         case .NewOrder(let params):

@@ -18,18 +18,23 @@ public class Client {
     
     private let manager: Manager
     
-    private let apiKey: String
-    private let apiSecret: [UInt8]
+    private var apiKey: String
+    private var apiSecret: [UInt8]
     
     public init(apiKey: String, apiSecret: String) {
         
-        self.apiKey = apiKey
-        self.apiSecret = [UInt8](apiSecret.utf8)
+        self.apiKey = ""
+        self.apiSecret = [UInt8]()
         
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         manager = Alamofire.Manager(configuration: configuration)
     }
 
+    public func auth(apiKey: String, apiSecret: String) {
+        self.apiKey = apiKey
+        self.apiSecret = [UInt8](apiSecret.utf8)
+    }
+    
     public func ticker(completion: TickerResponse -> Void) {
         
         print("-- Starting TICKER method ---------------------------")
