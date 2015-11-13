@@ -32,7 +32,7 @@ public struct MarginOffer: ResponseObjectSerializable {
     
     public let executedAmount: Float
     
-    public let offerId: Int
+//    public let offerId: Int
     
     
     public init(json: JSON) throws {
@@ -49,8 +49,8 @@ public struct MarginOffer: ResponseObjectSerializable {
             let isCancelled = dict["is_cancelled"]?.boolValue,
             let originalAmount = dict["original_amount"]?.floatValue,
             let remainingAmount = dict["remaining_amount"]?.floatValue,
-            let executedAmount = dict["executed_amount"]?.floatValue,
-            let offerId = dict["offer_id"]?.intValue
+            let executedAmount = dict["executed_amount"]?.floatValue
+//            let offerId = dict["offer_id"]?.intValue
         else {
             throw JSONErrors.InvalidJSON(json: json)
         }
@@ -74,6 +74,6 @@ public struct MarginOffer: ResponseObjectSerializable {
         self.originalAmount = originalAmount
         self.remainingAmount = remainingAmount
         self.executedAmount = executedAmount
-        self.offerId = offerId
+//        self.offerId = offerId
     }
 }

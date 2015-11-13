@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		08733204475A4C52AF1254B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE9F1BE205605BB79EEB1CB /* Pods.framework */; };
 		430E9B221BF0EC5200937E34 /* DepositNewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E9B211BF0EC5200937E34 /* DepositNewResponse.swift */; };
+		431561191BF60124009C0358 /* TotalTakenFundsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431561181BF60124009C0358 /* TotalTakenFundsResponse.swift */; };
+		4315611B1BF60C92009C0358 /* CloseMarginFundingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4315611A1BF60C92009C0358 /* CloseMarginFundingResponse.swift */; };
 		434EC3141BED6C230037A2F3 /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3131BED6C230037A2F3 /* OrderType.swift */; };
 		434EC3161BED6DC10037A2F3 /* TradeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3151BED6DC10037A2F3 /* TradeType.swift */; };
 		434EC3181BED6E3B0037A2F3 /* DepositMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3171BED6E3B0037A2F3 /* DepositMethod.swift */; };
@@ -25,7 +27,6 @@
 		434EC3371BEE3C0A0037A2F3 /* JSONErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3361BEE3C0A0037A2F3 /* JSONErrors.swift */; };
 		434EC3391BEE3DA80037A2F3 /* ResponseObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3381BEE3DA80037A2F3 /* ResponseObjectSerializable.swift */; };
 		4371B1F11BF51F3700A62DC6 /* ReplaceOrderParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1F01BF51F3700A62DC6 /* ReplaceOrderParams.swift */; };
-		4371B1F31BF5203200A62DC6 /* OrderStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1F21BF5203200A62DC6 /* OrderStatusResponse.swift */; };
 		4371B1F51BF5210300A62DC6 /* ActiveOrdersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1F41BF5210300A62DC6 /* ActiveOrdersResponse.swift */; };
 		4371B1F71BF5212600A62DC6 /* ActiveOrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1F61BF5212600A62DC6 /* ActiveOrderResponse.swift */; };
 		4371B1F91BF521E500A62DC6 /* PositionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B1F81BF521E500A62DC6 /* PositionsRouter.swift */; };
@@ -41,6 +42,12 @@
 		4371B2111BF5334B00A62DC6 /* PastTradesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B2101BF5334B00A62DC6 /* PastTradesResponse.swift */; };
 		4371B2131BF5358000A62DC6 /* MarginFundingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B2121BF5358000A62DC6 /* MarginFundingRouter.swift */; };
 		4371B2151BF535E600A62DC6 /* MarginOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B2141BF535E600A62DC6 /* MarginOffer.swift */; };
+		4371B2181BF5EA8200A62DC6 /* NewOfferResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B2171BF5EA8200A62DC6 /* NewOfferResponse.swift */; };
+		4371B21A1BF5F0B600A62DC6 /* CancelOfferResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B2191BF5F0B600A62DC6 /* CancelOfferResponse.swift */; };
+		4371B21E1BF5F77200A62DC6 /* ActiveCreditsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B21D1BF5F77200A62DC6 /* ActiveCreditsResponse.swift */; };
+		4371B2201BF5F95300A62DC6 /* TakenFund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B21F1BF5F95300A62DC6 /* TakenFund.swift */; };
+		4371B2221BF5FB1E00A62DC6 /* TakenFundsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B2211BF5FB1E00A62DC6 /* TakenFundsResponse.swift */; };
+		4371B2241BF5FE1400A62DC6 /* UsedFunding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4371B2231BF5FE1400A62DC6 /* UsedFunding.swift */; };
 		43820EBE1BEB4EA800D095B8 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */; };
 		4386BEEF1BEAA46E006BBED4 /* BitfinexSwiftAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4386BEF61BEAA46E006BBED4 /* BitfinexSwiftAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */; };
@@ -82,6 +89,8 @@
 /* Begin PBXFileReference section */
 		3BE9F1BE205605BB79EEB1CB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E9B211BF0EC5200937E34 /* DepositNewResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositNewResponse.swift; sourceTree = "<group>"; };
+		431561181BF60124009C0358 /* TotalTakenFundsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalTakenFundsResponse.swift; sourceTree = "<group>"; };
+		4315611A1BF60C92009C0358 /* CloseMarginFundingResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseMarginFundingResponse.swift; sourceTree = "<group>"; };
 		434EC3131BED6C230037A2F3 /* OrderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
 		434EC3151BED6DC10037A2F3 /* TradeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeType.swift; sourceTree = "<group>"; };
 		434EC3171BED6E3B0037A2F3 /* DepositMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositMethod.swift; sourceTree = "<group>"; };
@@ -98,7 +107,6 @@
 		434EC3361BEE3C0A0037A2F3 /* JSONErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONErrors.swift; sourceTree = "<group>"; };
 		434EC3381BEE3DA80037A2F3 /* ResponseObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObjectSerializable.swift; sourceTree = "<group>"; };
 		4371B1F01BF51F3700A62DC6 /* ReplaceOrderParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceOrderParams.swift; sourceTree = "<group>"; };
-		4371B1F21BF5203200A62DC6 /* OrderStatusResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderStatusResponse.swift; sourceTree = "<group>"; };
 		4371B1F41BF5210300A62DC6 /* ActiveOrdersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOrdersResponse.swift; sourceTree = "<group>"; };
 		4371B1F61BF5212600A62DC6 /* ActiveOrderResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveOrderResponse.swift; sourceTree = "<group>"; };
 		4371B1F81BF521E500A62DC6 /* PositionsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionsRouter.swift; sourceTree = "<group>"; };
@@ -114,6 +122,12 @@
 		4371B2101BF5334B00A62DC6 /* PastTradesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastTradesResponse.swift; sourceTree = "<group>"; };
 		4371B2121BF5358000A62DC6 /* MarginFundingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginFundingRouter.swift; sourceTree = "<group>"; };
 		4371B2141BF535E600A62DC6 /* MarginOffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginOffer.swift; sourceTree = "<group>"; };
+		4371B2171BF5EA8200A62DC6 /* NewOfferResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewOfferResponse.swift; sourceTree = "<group>"; };
+		4371B2191BF5F0B600A62DC6 /* CancelOfferResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelOfferResponse.swift; sourceTree = "<group>"; };
+		4371B21D1BF5F77200A62DC6 /* ActiveCreditsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveCreditsResponse.swift; sourceTree = "<group>"; };
+		4371B21F1BF5F95300A62DC6 /* TakenFund.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakenFund.swift; sourceTree = "<group>"; };
+		4371B2211BF5FB1E00A62DC6 /* TakenFundsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakenFundsResponse.swift; sourceTree = "<group>"; };
+		4371B2231BF5FE1400A62DC6 /* UsedFunding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsedFunding.swift; sourceTree = "<group>"; };
 		43820EBD1BEB4EA800D095B8 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/BitfinexSwiftAPI-fgmlprkllddmkhbvdulnrsoigyot/Build/Products/Debug/CryptoSwift.framework"; sourceTree = "<group>"; };
 		4386BEEB1BEAA46E006BBED4 /* BitfinexSwiftAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitfinexSwiftAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4386BEEE1BEAA46E006BBED4 /* BitfinexSwiftAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitfinexSwiftAPI.h; sourceTree = "<group>"; };
@@ -171,6 +185,7 @@
 		434EC3281BEE2C380037A2F3 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				4371B2161BF5EA5D00A62DC6 /* MarginFunding */,
 				4371B2011BF5272700A62DC6 /* HistoricalData */,
 				4371B1FA1BF522C200A62DC6 /* Positions */,
 				43C38A431BF50B520013B6F3 /* Orders */,
@@ -216,6 +231,19 @@
 				4371B2101BF5334B00A62DC6 /* PastTradesResponse.swift */,
 			);
 			name = HistoricalData;
+			sourceTree = "<group>";
+		};
+		4371B2161BF5EA5D00A62DC6 /* MarginFunding */ = {
+			isa = PBXGroup;
+			children = (
+				4371B2171BF5EA8200A62DC6 /* NewOfferResponse.swift */,
+				4371B2191BF5F0B600A62DC6 /* CancelOfferResponse.swift */,
+				4371B21D1BF5F77200A62DC6 /* ActiveCreditsResponse.swift */,
+				4371B2211BF5FB1E00A62DC6 /* TakenFundsResponse.swift */,
+				431561181BF60124009C0358 /* TotalTakenFundsResponse.swift */,
+				4315611A1BF60C92009C0358 /* CloseMarginFundingResponse.swift */,
+			);
+			name = MarginFunding;
 			sourceTree = "<group>";
 		};
 		4386BEE11BEAA46E006BBED4 = {
@@ -315,6 +343,8 @@
 				4371B2081BF52CEA00A62DC6 /* DepositWithdrawal.swift */,
 				4371B20E1BF5308600A62DC6 /* PastTrade.swift */,
 				4371B2141BF535E600A62DC6 /* MarginOffer.swift */,
+				4371B21F1BF5F95300A62DC6 /* TakenFund.swift */,
+				4371B2231BF5FE1400A62DC6 /* UsedFunding.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -326,7 +356,6 @@
 				43C38A481BF5193F0013B6F3 /* NewMultiOrdersResponse.swift */,
 				43C38A4A1BF51D330013B6F3 /* CancelOrderResponse.swift */,
 				43C38A4C1BF51DFB0013B6F3 /* CancellAllOrdersResponse.swift */,
-				4371B1F21BF5203200A62DC6 /* OrderStatusResponse.swift */,
 				4371B1F41BF5210300A62DC6 /* ActiveOrdersResponse.swift */,
 				4371B1F61BF5212600A62DC6 /* ActiveOrderResponse.swift */,
 			);
@@ -512,24 +541,29 @@
 				4371B1F51BF5210300A62DC6 /* ActiveOrdersResponse.swift in Sources */,
 				4386BF081BEAA503006BBED4 /* Client.swift in Sources */,
 				4371B2091BF52CEA00A62DC6 /* DepositWithdrawal.swift in Sources */,
+				4315611B1BF60C92009C0358 /* CloseMarginFundingResponse.swift in Sources */,
 				434EC3231BED92320037A2F3 /* BitfinexAPI.swift in Sources */,
 				43C38A4D1BF51DFB0013B6F3 /* CancellAllOrdersResponse.swift in Sources */,
+				4371B2221BF5FB1E00A62DC6 /* TakenFundsResponse.swift in Sources */,
 				4371B1F91BF521E500A62DC6 /* PositionsRouter.swift in Sources */,
 				43C38A301BF4DB530013B6F3 /* FundingbookResponse.swift in Sources */,
+				4371B21E1BF5F77200A62DC6 /* ActiveCreditsResponse.swift in Sources */,
 				43C38A321BF4DBD00013B6F3 /* Fundingbook.swift in Sources */,
 				43AE1FFC1BF4D03D00F1982E /* StatsResponse.swift in Sources */,
+				4371B2241BF5FE1400A62DC6 /* UsedFunding.swift in Sources */,
 				434EC3201BED91CB0037A2F3 /* Symbol.swift in Sources */,
 				43AE1FF71BF4B8C600F1982E /* BitfinexRouters.swift in Sources */,
 				43C38A3B1BF4FDB50013B6F3 /* LendsResponse.swift in Sources */,
 				43C38A361BF4F8270013B6F3 /* TradesResponse.swift in Sources */,
-				4371B1F31BF5203200A62DC6 /* OrderStatusResponse.swift in Sources */,
 				434EC3311BEE2EA20037A2F3 /* Fees.swift in Sources */,
+				4371B21A1BF5F0B600A62DC6 /* CancelOfferResponse.swift in Sources */,
 				43C38A491BF5193F0013B6F3 /* NewMultiOrdersResponse.swift in Sources */,
 				43AE1FF51BF4B88C00F1982E /* OrdersRouter.swift in Sources */,
 				43AE1FF91BF4B9F500F1982E /* PublicRouter.swift in Sources */,
 				43BD2FD61BEB3D68004131FB /* Stat.swift in Sources */,
 				434EC3391BEE3DA80037A2F3 /* ResponseObjectSerializable.swift in Sources */,
 				43C38A3F1BF5012B0013B6F3 /* SymbolsDetailsResponse.swift in Sources */,
+				4371B2181BF5EA8200A62DC6 /* NewOfferResponse.swift in Sources */,
 				434EC3371BEE3C0A0037A2F3 /* JSONErrors.swift in Sources */,
 				434EC3271BEE24550037A2F3 /* Extensions.swift in Sources */,
 				4371B2071BF529A600A62DC6 /* BalanceLedger.swift in Sources */,
@@ -541,6 +575,8 @@
 				430E9B221BF0EC5200937E34 /* DepositNewResponse.swift in Sources */,
 				434EC31A1BED6EA10037A2F3 /* WalletType.swift in Sources */,
 				4371B1F71BF5212600A62DC6 /* ActiveOrderResponse.swift in Sources */,
+				4371B2201BF5F95300A62DC6 /* TakenFund.swift in Sources */,
+				431561191BF60124009C0358 /* TotalTakenFundsResponse.swift in Sources */,
 				4386BF0A1BEAA515006BBED4 /* TickerResponse.swift in Sources */,
 				43C38A471BF511BE0013B6F3 /* NewOrderParams.swift in Sources */,
 				43C38A4B1BF51D330013B6F3 /* CancelOrderResponse.swift in Sources */,
