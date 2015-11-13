@@ -13,6 +13,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://DarthRamone@bitbucket.org/DarthRamone/bitfinexswiftapi.git", :tag => s.version.to_s }
 
   s.requires_arc = true
+  s.osx.deployment_target = "10.8"
+  s.source_files = "BitfinexSwiftAPI/*.{swift}"
 
   s.dependency 'SwiftyJSON', '~> 2.3'
   s.dependency 'Alamofire', '~> 3.0'
