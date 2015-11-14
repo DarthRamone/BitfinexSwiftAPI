@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import CryptoSwift
+import Starscream
 
 let baseURL = "https://api.bitfinex.com/v1"
 let webSocketURL = "wss://api2.bitfinex.com:3000/ws"
@@ -17,6 +18,8 @@ let webSocketURL = "wss://api2.bitfinex.com:3000/ws"
 public class Client {
     
     private let manager: Manager
+    
+    private let wsClient: WebSocketClient
     
     private var apiKey: String
     private var apiSecret: [UInt8]
@@ -28,11 +31,16 @@ public class Client {
         
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         manager = Alamofire.Manager(configuration: configuration)
+        wsClient = WebSocketClient()
     }
 
     public func auth(apiKey: String, apiSecret: String) {
         self.apiKey = apiKey
         self.apiSecret = [UInt8](apiSecret.utf8)
+    }
+    
+    public func new() {
+        print("pew")
     }
     
     public func ticker(symbol: Symbol, completion: TickerResponse -> Void) {
@@ -164,5 +172,4 @@ public class Client {
                 }
         }
     }
-    
 }
