@@ -6,13 +6,13 @@
 //  Copyright © 2015 DarthRamone. All rights reserved.
 //
 
-public enum PositionsRouter: BitfinexRouterProtocol {
+internal enum PositionsRouter: BitfinexRouterProtocol {
     
     case ActivePositions
     case ClaimPosition(id: Int)
     
     
-    public var URLRequest: NSMutableURLRequest {
+    internal var URLRequest: NSMutableURLRequest {
     
         let path: String
         var payload: [String: AnyObject] = [:]
@@ -33,7 +33,7 @@ public enum PositionsRouter: BitfinexRouterProtocol {
     }
     
     
-    public func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
+    internal func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
         
         let url = NSURL(string: self.baseURL)!
         let mutableURLRequest = NSMutableURLRequest(URL: url.URLByAppendingPathComponent(path))

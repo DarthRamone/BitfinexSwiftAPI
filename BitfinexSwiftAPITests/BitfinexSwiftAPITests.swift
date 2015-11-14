@@ -25,7 +25,7 @@ class BitfinexSwiftAPITests: XCTestCase {
         
        let expectation = expectationWithDescription("401")
         
-        client.ticker {
+        client.ticker(Symbol.BTCUSD) {
             print($0)
             expectation.fulfill()
         }
@@ -37,7 +37,7 @@ class BitfinexSwiftAPITests: XCTestCase {
         
         let expectation = expectationWithDescription("401")
         
-        client.stats {
+        client.stats(Symbol.BTCUSD) {
             print($0)
             expectation.fulfill()
         }
@@ -79,7 +79,7 @@ class BitfinexSwiftAPITests: XCTestCase {
         
         let expectation = expectationWithDescription("401")
         
-        client.fundingbook {
+        client.fundingbook(Currency.BTC) {
             print($0)
             expectation.fulfill()
         }

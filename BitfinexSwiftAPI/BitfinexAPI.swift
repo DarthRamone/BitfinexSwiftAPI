@@ -11,7 +11,7 @@ import SwiftyJSON
 import CryptoSwift
 import Alamofire
 
-public enum BitfixAPI: BitfinexRouterProtocol {
+internal enum BitfixAPI: BitfinexRouterProtocol {
 
     static let apiKey = "U59Zh82XI3WmHUvPQlpxCjaHm4wvw8VOVwf9pfQ2iuB"
     static let apiSecret = "ulIiAavfzRMoS2auTnMV98ZaWBl3NADROKMTGdJ6SdG"
@@ -22,7 +22,7 @@ public enum BitfixAPI: BitfinexRouterProtocol {
     case MarginInfos
     
     
-    public var URLRequest: NSMutableURLRequest {
+    internal var URLRequest: NSMutableURLRequest {
         
         var path = ""
         var payload: [String: AnyObject] = [ "nonce": NonceProvider.sharedInstanse.nonce ]
@@ -48,7 +48,7 @@ public enum BitfixAPI: BitfinexRouterProtocol {
     }
 
     
-    public func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
+    internal func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
         
         let url = NSURL(string: self.baseURL)!
         let mutableURLRequest = NSMutableURLRequest(URL: url.URLByAppendingPathComponent(path))

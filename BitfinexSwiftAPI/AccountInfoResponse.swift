@@ -23,13 +23,13 @@ public struct AccountInfoResponse: ResponseObjectSerializable {
             let dict = json.array?[0].dictionary,
             let makerFees = dict["maker_fees"]?.floatValue,
             let takerFees = dict["taker_fees"]?.floatValue,
-            let fees      = dict["fees"]?.feesArray
+            let fees      = dict["fees"]?.array
         else {
             throw JSONErrors.InvalidJSON(json: json)
         }
         
         self.makerFees = makerFees
         self.takerFees = takerFees
-        self.fees = fees
+        try self.fees = fees.map { try Fees(json: $0) }
     }
 }

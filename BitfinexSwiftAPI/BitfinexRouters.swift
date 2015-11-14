@@ -8,7 +8,7 @@
 
 import Alamofire
 
-public protocol BitfinexRouterProtocol: URLRequestConvertible {
+internal protocol BitfinexRouterProtocol: URLRequestConvertible {
     
     var baseURL: String { get }
     
@@ -18,7 +18,7 @@ public protocol BitfinexRouterProtocol: URLRequestConvertible {
 
 extension BitfinexRouterProtocol {
     
-    public var baseURL: String {
+    internal var baseURL: String {
         get { return "https://api.bitfinex.com" }
     }
 }

@@ -43,50 +43,6 @@ extension String {
     
 }
 
-extension JSON {
-
-    var fees: Fees? {
-        guard
-            let pairs = self.dictionary?["pairs"]?.string,
-            let mFees = self.dictionary?["maker_fees"]?.floatValue,
-            let tFees = self.dictionary?["taker_fees"]?.floatValue
-        else {
-            return nil
-        }
-        
-        return Fees(pairs:     pairs,
-                    makerFees: mFees,
-                    takerFees: tFees)
-    }
-    
-    public var feesArray: [Fees]? {
-        get {
-            guard self.type == .Array else {
-                return nil
-            }
-            
-            let fees = self.arrayValue.map{ $0.fees }.filter{ $0 != nil }.map{ $0! }
-            
-            guard fees.count == self.arrayValue.count else {
-                return nil
-            }
-            
-            return fees
-        }
-    }
-    
-    public init(_ fees: Fees) {
-        let dictionary: [String: AnyObject] = [
-            "maker_fees": fees.makerFees,
-            "taker_fees": fees.takerFees,
-            "pairs": fees.pairs
-        ]
-
-        self.init(dictionary)
-    }
-}
-
-
 extension Dictionary where Key: StringLiteralConvertible, Value: AnyObject {
     public var encrypted: String {
         get {

@@ -6,14 +6,34 @@
 //  Copyright © 2015 DarthRamone. All rights reserved.
 //
 
-import Foundation
+import SwiftyJSON
 
 public struct Fees {
     
-    let pairs: String
+    public let pairs: Currency
     
-    let makerFees: Float
+    public let makerFees: Float
     
-    let takerFees: Float
+    public let takerFees: Float
+    
+    public init(json: JSON) throws {
+        
+        guard
+            let dict = json.dictionary,
+            let pairsStr = dict["pairs"]?.stringValue,
+            let makerFees = dict["maker_fees"]?.floatValue,
+            let takerFees = dict["taker_fees"]?.floatValue
+        else {
+            throw JSONErrors.InvalidJSON(json: json)
+        }
+        
+        guard let pairs = Currency(string: pairsStr) else {
+            throw BitfinexErrors.InvalidCurrency(currency: pairsStr)
+        }
+        
+        self.pairs = pairs
+        self.makerFees = makerFees
+        self.takerFees = takerFees
+    }
     
 }

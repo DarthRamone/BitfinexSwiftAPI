@@ -6,7 +6,7 @@
 //  Copyright © 2015 DarthRamone. All rights reserved.
 //
 
-public enum PublicRouter: BitfinexRouterProtocol {
+internal enum PublicRouter: BitfinexRouterProtocol {
     
     case Ticker(symbol: Symbol)
     case Stats(symbol: Symbol)
@@ -18,7 +18,7 @@ public enum PublicRouter: BitfinexRouterProtocol {
     case SymbolsDetails
     
     
-    public var URLRequest: NSMutableURLRequest {
+    internal var URLRequest: NSMutableURLRequest {
         
         let path: String
         var payload: [String: AnyObject] = [:]
@@ -70,7 +70,7 @@ public enum PublicRouter: BitfinexRouterProtocol {
         
     }
     
-    public func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
+    internal func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
         
         let strUrl: String = baseURL + path + "?" + payload.map { key, value in "\(key)=\(String(value))" }.joinWithSeparator("&")
         

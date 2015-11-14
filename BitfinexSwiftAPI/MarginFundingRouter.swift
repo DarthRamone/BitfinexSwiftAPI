@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-public enum MarginFundingRouter: BitfinexRouterProtocol {
+internal enum MarginFundingRouter: BitfinexRouterProtocol {
 
     case NewOffer(currency: Currency, amount: Float, rate: Float, period: Int, direction: FundingDirection)
     case CancelOffer(id: Int)
@@ -17,7 +17,7 @@ public enum MarginFundingRouter: BitfinexRouterProtocol {
     case ActiveFunding
     case CloseMarginFunding(swapId: Int)
     
-    public var URLRequest: NSMutableURLRequest {
+    internal var URLRequest: NSMutableURLRequest {
         
         var path: String
         var payload: [String: AnyObject] = [:]
@@ -52,7 +52,7 @@ public enum MarginFundingRouter: BitfinexRouterProtocol {
     }
 
     
-    public func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
+    internal func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
         
         let url = NSURL(string: self.baseURL)!
         let mutableURLRequest = NSMutableURLRequest(URL: url.URLByAppendingPathComponent(path))

@@ -8,13 +8,13 @@
 
 import SwiftyJSON
 
-public enum HistoricalDataRouter: BitfinexRouterProtocol {
+internal enum HistoricalDataRouter: BitfinexRouterProtocol {
     
     case BalanceHistory(currency: Currency, since: NSDate?, until: NSDate?, limit: Int?, wallet: WalletType?)
     case DepositWithdrawalHistory(currency: Currency, method: DepositMethod?, since: NSDate?, until: NSDate?, limit: Int?)
     case PastTradesResponse(symbol: Symbol, timestamp: NSDate, until: NSDate?, limitTrades: Int?, reverse: Int?)
     
-    public var URLRequest: NSMutableURLRequest {
+    internal var URLRequest: NSMutableURLRequest {
         
         let path: String
         var payload: [String: AnyObject] = [:]
@@ -73,7 +73,7 @@ public enum HistoricalDataRouter: BitfinexRouterProtocol {
     }
 
     
-    public func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
+    internal func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
         
         let url = NSURL(string: self.baseURL)!
         let mutableURLRequest = NSMutableURLRequest(URL: url.URLByAppendingPathComponent(path))

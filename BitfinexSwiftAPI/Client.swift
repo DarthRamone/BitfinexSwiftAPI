@@ -35,11 +35,9 @@ public class Client {
         self.apiSecret = [UInt8](apiSecret.utf8)
     }
     
-    public func ticker(completion: TickerResponse -> Void) {
+    public func ticker(symbol: Symbol, completion: TickerResponse -> Void) {
         
-        print("-- Starting TICKER method ---------------------------")
-        
-        manager.request(PublicRouter.Ticker(symbol: Symbol.BTCUSD))
+        manager.request(PublicRouter.Ticker(symbol: symbol))
             .responseObject { (response: Response<TickerResponse, NSError>) in
                 switch response.result {
                 case .Success(let result):
@@ -52,8 +50,6 @@ public class Client {
     
     public func symbols(completion: SymbolsResponse -> Void) {
         
-        print("-- Starting SYMBOLS method ---------------------------")
-
         manager.request(PublicRouter.Symbols)
             .responseObject { (response: Response<SymbolsResponse, NSError>) in
                 switch response.result {
@@ -65,11 +61,9 @@ public class Client {
         }
     }
     
-    public func stats(completion: StatsResponse -> Void) {
+    public func stats(symbol: Symbol, completion: StatsResponse -> Void) {
         
-        print("-- Starting STATS method ---------------------------")
-        
-        manager.request(PublicRouter.Stats(symbol: Symbol.BTCUSD))
+        manager.request(PublicRouter.Stats(symbol: symbol))
             .responseObject { (response: Response<StatsResponse, NSError>) in
                 switch response.result {
                 case .Success(let result):
@@ -81,8 +75,6 @@ public class Client {
     }
     
     public func accountInfos(completion: AccountInfoResponse -> Void) {
-        
-        print("-- Starting ACCOUNT INFOS method ---------------------------")
         
         manager.request(BitfixAPI.AccountInfos)
             .responseObject { (response: Response<AccountInfoResponse, NSError>) in
@@ -97,8 +89,6 @@ public class Client {
     
     public func depositNew(method: DepositMethod, wallet: WalletType, renew: Bool, completion: DepositNewResponse -> Void) {
         
-        print("-- Starting DEPOSIT NEW method ---------------------------")
-        
         manager.request(BitfixAPI.Deposit(method: method, wallet: wallet, renew: renew))
             .responseObject { (response: Response<DepositNewResponse, NSError>) in
                 switch response.result {
@@ -110,11 +100,9 @@ public class Client {
         }
     }
     
-    public func fundingbook(completion: FundingbookResponse -> Void) {
+    public func fundingbook(currency: Currency, limitBids: Int = 3, limitAsks: Int = 3, completion: FundingbookResponse -> Void) {
         
-        print("-- Starting FUNDINGBOOK method ---------------------------")
-        
-        manager.request(PublicRouter.Fundingbook(currency: Currency.BTC, limitBids: 3, limitAsks: 3))
+        manager.request(PublicRouter.Fundingbook(currency: Currency.BTC, limitBids: limitBids, limitAsks: limitAsks))
             .responseObject { (response: Response<FundingbookResponse, NSError>) in
                 switch response.result {
                 case .Success(let result):
@@ -126,9 +114,7 @@ public class Client {
     }
     
     public func orderbook(completion: OrderbookResponse -> Void) {
-        
-        print("-- Starting ORDERBOOK method ---------------------------")
-        
+   
         manager.request(PublicRouter.Fundingbook(currency: Currency.BTC, limitBids: 3, limitAsks: 3))
             .responseObject { (response: Response<OrderbookResponse, NSError>) in
                 switch response.result {
@@ -141,8 +127,6 @@ public class Client {
     }
     
     public func trades(completion: TradesResponse -> Void) {
-        
-        print("-- Starting TRADES method ---------------------------")
         
         manager.request(PublicRouter.Trades(symbol: Symbol.BTCUSD, timestamp: nil, limitTrades: 5))
             .responseObject { (response: Response<TradesResponse, NSError>) in
@@ -157,8 +141,6 @@ public class Client {
     
     public func lends(completion: LendsResponse -> Void) {
         
-        print("-- Starting LENDS method ---------------------------")
-        
         manager.request(PublicRouter.Lends(currency: Currency.BTC, timestamp: nil, limitLends: 10))
             .responseObject { (response: Response<LendsResponse, NSError>) in
                 switch response.result {
@@ -171,9 +153,7 @@ public class Client {
     }
 
     public func symbolsDetails(completion: SymbolsDetailsResponse -> Void) {
-        
-        print("-- Starting SYM DETAILS method ---------------------------")
-        
+
         manager.request(PublicRouter.SymbolsDetails)
             .responseObject { (response: Response<SymbolsDetailsResponse, NSError>) in
                 switch response.result {

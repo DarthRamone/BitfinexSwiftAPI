@@ -6,7 +6,7 @@
 //  Copyright © 2015 DarthRamone. All rights reserved.
 //
 
-public enum OrdersRouter: BitfinexRouterProtocol {
+internal enum OrdersRouter: BitfinexRouterProtocol {
     
     case NewOrder(params: NewOrderParams)
     case NewMultiOrders(params: [NewOrderParams])
@@ -17,7 +17,7 @@ public enum OrdersRouter: BitfinexRouterProtocol {
     case OrderStatus(id: Int)
     case ActiveOrders
     
-    public var URLRequest: NSMutableURLRequest {
+    internal var URLRequest: NSMutableURLRequest {
         
         var path = ""
         var payload: [String: AnyObject] = [ "nonce": NonceProvider.sharedInstanse.nonce ]
@@ -77,7 +77,7 @@ public enum OrdersRouter: BitfinexRouterProtocol {
     }
     
     
-    public func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
+    internal func createRequest(path: String, payload: [String: AnyObject]) -> NSMutableURLRequest {
         
         let url = NSURL(string: self.baseURL)!
         let mutableURLRequest = NSMutableURLRequest(URL: url.URLByAppendingPathComponent(path))
