@@ -17,6 +17,7 @@
 		431561261BF61EE6009C0358 /* MarginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431561251BF61EE6009C0358 /* MarginInfo.swift */; };
 		431561281BF6210A009C0358 /* MarginInformationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431561271BF6210A009C0358 /* MarginInformationResponse.swift */; };
 		431561471BF6429A009C0358 /* NonceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431561461BF6429A009C0358 /* NonceProvider.swift */; };
+		43174B961BF8C27100500F71 /* WsTickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43174B951BF8C27100500F71 /* WsTickerDelegate.swift */; };
 		434EC3141BED6C230037A2F3 /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3131BED6C230037A2F3 /* OrderType.swift */; };
 		434EC3161BED6DC10037A2F3 /* TradeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3151BED6DC10037A2F3 /* TradeType.swift */; };
 		434EC3181BED6E3B0037A2F3 /* DepositMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EC3171BED6E3B0037A2F3 /* DepositMethod.swift */; };
@@ -65,7 +66,7 @@
 		43AE1FF91BF4B9F500F1982E /* PublicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE1FF81BF4B9F500F1982E /* PublicRouter.swift */; };
 		43AE1FFC1BF4D03D00F1982E /* StatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE1FFB1BF4D03D00F1982E /* StatsResponse.swift */; };
 		43AE6B181BF774BC00758476 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE6B171BF774BC00758476 /* WebSocketClient.swift */; };
-		43AE6B1E1BF77A7800758476 /* WsTickerSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE6B1D1BF77A7800758476 /* WsTickerSnapshot.swift */; };
+		43AE6B1E1BF77A7800758476 /* WsTickerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE6B1D1BF77A7800758476 /* WsTickerMessage.swift */; };
 		43AE6B211BF77D6C00758476 /* WsEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE6B201BF77D6C00758476 /* WsEventType.swift */; };
 		43AE6B231BF77E7200758476 /* WsChannelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE6B221BF77E7200758476 /* WsChannelType.swift */; };
 		43AE6B261BF782D100758476 /* WsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE6B251BF782D100758476 /* WsResponse.swift */; };
@@ -108,6 +109,7 @@
 		431561251BF61EE6009C0358 /* MarginInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginInfo.swift; sourceTree = "<group>"; };
 		431561271BF6210A009C0358 /* MarginInformationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarginInformationResponse.swift; sourceTree = "<group>"; };
 		431561461BF6429A009C0358 /* NonceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonceProvider.swift; sourceTree = "<group>"; };
+		43174B951BF8C27100500F71 /* WsTickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsTickerDelegate.swift; sourceTree = "<group>"; };
 		434EC3131BED6C230037A2F3 /* OrderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
 		434EC3151BED6DC10037A2F3 /* TradeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeType.swift; sourceTree = "<group>"; };
 		434EC3171BED6E3B0037A2F3 /* DepositMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositMethod.swift; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 		43AE1FF81BF4B9F500F1982E /* PublicRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicRouter.swift; sourceTree = "<group>"; };
 		43AE1FFB1BF4D03D00F1982E /* StatsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsResponse.swift; sourceTree = "<group>"; };
 		43AE6B171BF774BC00758476 /* WebSocketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
-		43AE6B1D1BF77A7800758476 /* WsTickerSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsTickerSnapshot.swift; sourceTree = "<group>"; };
+		43AE6B1D1BF77A7800758476 /* WsTickerMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsTickerMessage.swift; sourceTree = "<group>"; };
 		43AE6B201BF77D6C00758476 /* WsEventType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsEventType.swift; sourceTree = "<group>"; };
 		43AE6B221BF77E7200758476 /* WsChannelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsChannelType.swift; sourceTree = "<group>"; };
 		43AE6B251BF782D100758476 /* WsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WsResponse.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				434EC3261BEE24550037A2F3 /* Extensions.swift */,
 				431561461BF6429A009C0358 /* NonceProvider.swift */,
 				43AE6B171BF774BC00758476 /* WebSocketClient.swift */,
+				43174B951BF8C27100500F71 /* WsTickerDelegate.swift */,
 			);
 			path = BitfinexSwiftAPI;
 			sourceTree = "<group>";
@@ -377,7 +380,7 @@
 		43AE6B241BF77FBF00758476 /* Ticker */ = {
 			isa = PBXGroup;
 			children = (
-				43AE6B1D1BF77A7800758476 /* WsTickerSnapshot.swift */,
+				43AE6B1D1BF77A7800758476 /* WsTickerMessage.swift */,
 			);
 			name = Ticker;
 			sourceTree = "<group>";
@@ -605,9 +608,10 @@
 				4371B20F1BF5308600A62DC6 /* PastTrade.swift in Sources */,
 				4371B1FE1BF522E000A62DC6 /* ClaimPositionResponse.swift in Sources */,
 				434EC3141BED6C230037A2F3 /* OrderType.swift in Sources */,
-				43AE6B1E1BF77A7800758476 /* WsTickerSnapshot.swift in Sources */,
+				43AE6B1E1BF77A7800758476 /* WsTickerMessage.swift in Sources */,
 				4371B1F51BF5210300A62DC6 /* ActiveOrdersResponse.swift in Sources */,
 				431561211BF61554009C0358 /* Wallet.swift in Sources */,
+				43174B961BF8C27100500F71 /* WsTickerDelegate.swift in Sources */,
 				4386BF081BEAA503006BBED4 /* Client.swift in Sources */,
 				4371B2091BF52CEA00A62DC6 /* DepositWithdrawal.swift in Sources */,
 				4315611B1BF60C92009C0358 /* CloseMarginFundingResponse.swift in Sources */,

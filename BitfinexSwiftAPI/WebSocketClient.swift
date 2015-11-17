@@ -9,78 +9,64 @@
 import SwiftyJSON
 import Starscream
 
-internal class WebSocketClient {
+internal class WebSocketClient: WebSocketDelegate {
+    
+    let url = NSURL(string: "wss://api2.bitfinex.com:3000/ws")!
     
     private let tickerSocket: WebSocket
-    private let tradesSocket: WebSocket
-    private let bookSocket:   WebSocket
     
-    // List of subscribed channels
-    private var channels: [Int: WsChannelType] = [Int: WsChannelType]()
+    private var channels: [Int: Symbol] = [:]
     
-    internal init() {
-        
-        let url = NSURL(string: "wss://api2.bitfinex.com:3000/ws")!
+    internal let tickerDelegate: WsTickerDelegateProtocol
+    
+    internal init(tickerDelegate: WsTickerDelegateProtocol) {
+
+        self.tickerDelegate = tickerDelegate
         
         tickerSocket = WebSocket(url: url)
-        tradesSocket = WebSocket(url: url)
-        bookSocket   = WebSocket(url: url)
+        print("---------- Initializing WebSockets --------------------")
         
-        tickerSocket.delegate = TickerChannelDelegate(socket: tickerSocket)
+        tickerSocket.delegate = self//TickerChannelDelegate(socket: tickerSocket)
         tickerSocket.connect()
-        
     }
     
-    private class TickerChannelDelegate: WebSocketDelegate {
+    internal func websocketDidConnect(socket: WebSocket) {
         
-        private let socket: WebSocket
+        print("-------------- Ticker socket connected ------------------")
+        tickerSocket.writeString("{ \"event\": \"subscribe\", \"channel\": \"ticker\", \"pair\": \"btcusd\" }")
+        tickerSocket.writeString("{ \"event\": \"subscribe\", \"channel\": \"ticker\", \"pair\": \"ltcusd\" }")
+    }
+    
+    internal func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
+        print("-------------- Ticker socket disconnected ---------------")
+    }
+    
+    internal func websocketDidReceiveMessage(socket: WebSocket, text: String) {
+        print("-------------- Ticker message received ------------------")
         
-        init(socket: WebSocket) {
-            self.socket = socket
-        }
-        
-        private func websocketDidConnect(socket: WebSocket) {
+        let data = text.dataUsingEncoding(NSUTF8StringEncoding)!
+        let json = JSON(data: data)
+
+        if let _ = json.array {
+            print("---------------- JSON IS ARRAY -------------------")
+            var msg = try! WsTickerMessage(json: json)
+            msg.symbol = channels[msg.channelId]
             
-            print("-------------- Ticker socket connected ------------------")
-            socket.writeString("{ \"event\": \"subscribe\", \"channel\": \"ticker\", \"pair\": \"btcusd\" }")
-        }
-        
-        private func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
-            print("-------------- Ticker socket disconnected ---------------")
-        }
-        
-        private func websocketDidReceiveMessage(socket: WebSocket, text: String) {
-            print("-------------- Ticker message received ------------------")
-            print("Message: \(text)")
-        }
-        
-        private func websocketDidReceiveData(socket: WebSocket, data: NSData) {
-            print("-------------- Ticker received date ---------------------")
-        }
-        
-    }
-    
-    
-    
-    private class BookChannelDelegate: WebSocketDelegate {
-        private func websocketDidConnect(socket: WebSocket) {
-        }
-        private func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
-        }
-        private func websocketDidReceiveMessage(socket: WebSocket, text: String) {
-        }
-        private func websocketDidReceiveData(socket: WebSocket, data: NSData) {
+            tickerDelegate.messageReceived(msg)
+            
+        } else {
+            print("---------------- JSON NOT ARRAY -------------------")
+            if let dict = json.dictionary {
+                if dict["event"] != "info" {
+                    channels[(dict["chanId"]?.intValue)!] = Symbol(string: (dict["pair"]?.stringValue)!)
+                }
+            }
+            
         }
     }
     
-    private class TradesChannelDelegate: WebSocketDelegate {
-        private func websocketDidConnect(socket: WebSocket) {
-        }
-        private func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
-        }
-        private func websocketDidReceiveMessage(socket: WebSocket, text: String) {
-        }
-        private func websocketDidReceiveData(socket: WebSocket, data: NSData) {
-        }
+    internal func websocketDidReceiveData(socket: WebSocket, data: NSData) {
+        print("-------------- Ticker received date ---------------------")
     }
+
 }

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "BitfinexSwiftAPI"
-  s.version          = "0.1.0"
+  s.version          = "0.2.1"
   s.summary          = "BitfinexSwiftAPI provides API access to bitfinex.com"
 
   s.description      = <<-DESC
@@ -19,4 +19,5 @@ Pod::Spec.new do |s|
   s.dependency 'SwiftyJSON', '~> 2.3'
   s.dependency 'Alamofire', '~> 3.0'
   s.dependency 'CryptoSwift', '~> 0.1'
+  s.dependency 'Starscream', '~> 1.0.0'
 end

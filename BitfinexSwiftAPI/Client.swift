@@ -24,23 +24,19 @@ public class Client {
     private var apiKey: String
     private var apiSecret: [UInt8]
     
-    public init() {
+    public init(del: WsTickerDelegateProtocol) {
         
         self.apiKey = ""
         self.apiSecret = [UInt8]()
         
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         manager = Alamofire.Manager(configuration: configuration)
-        wsClient = WebSocketClient()
+        wsClient = WebSocketClient(tickerDelegate: del)
     }
-
+    
     public func auth(apiKey: String, apiSecret: String) {
         self.apiKey = apiKey
         self.apiSecret = [UInt8](apiSecret.utf8)
-    }
-    
-    public func new() {
-        print("pew")
     }
     
     public func ticker(symbol: Symbol, completion: TickerResponse -> Void) {

@@ -6,7 +6,6 @@
 //  Copyright © 2015 DarthRamone. All rights reserved.
 //
 
-import Foundation
 import SwiftyJSON
 import CryptoSwift
 

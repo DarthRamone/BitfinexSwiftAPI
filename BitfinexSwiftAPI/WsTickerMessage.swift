@@ -8,9 +8,11 @@
 
 import SwiftyJSON
 
-public struct WsTickerSnapshot {
+public struct WsTickerMessage {
     
     public let channelId: Int
+    
+    public var symbol: Symbol?
     
     public let bid: Float
     
@@ -33,7 +35,6 @@ public struct WsTickerSnapshot {
     public let low: Float
     
     public init(json: JSON) throws {
-        
         guard
             let arr = json.array,
             let channelId = arr[0].int,

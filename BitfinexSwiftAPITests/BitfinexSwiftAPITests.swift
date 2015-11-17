@@ -11,9 +11,15 @@ import SwiftyJSON
 
 @testable import BitfinexSwiftAPI
 
+public class TickerDelegate: WsTickerDelegateProtocol {
+    public func messageReceived(msg: WsTickerMessage) {
+        
+    }
+}
+
 class BitfinexSwiftAPITests: XCTestCase {
     
-    let client: Client = Client()
+    let client: Client = Client(del: TickerDelegate())
 
     let timeout: Double = 3000
     
